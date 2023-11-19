@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+}
+html,body{
+    height: 150%;
+    width: 100%;
+    background-color: rgb(243, 244, 246);
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.navbar{
+    height:5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 2vw;
+}
+.logo{
+   height: 100%;
+   /* background-color: crimson; */
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+}
+.content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: chocolate; */
+}
+a{
+    text-decoration: none;
+    font-size: 1.4vw;
+    color: gray;
+    font-weight: 600;
+    font-size: 1.3vw;
+ 
+}
+
+a:hover , .hover:hover{
+    color: rgb(78, 93, 192);
+    border-bottom: 1px solid rgb(78, 93, 192);
+    opacity: 1;
+}
+button{
+    background-color: rgb(78, 93, 192);
+    color: aliceblue;
+    border-radius: 0.5vw;
+    padding: 1vw;
+    border: none;
+    font-weight: bolder;
+    font-size: 1.3vw;
+}
+button:hover{
+    background-color: rgb(79, 97, 217);
+}
+.box1{
+
+    height: 30vw;
+   padding-left: 5vw;
+   padding-right: 5vw;
+   margin-top: 3vw;
+
+
+}
+
+.box1 img{
+    float: right;
+    height: 27vw;
+    margin-top: 2vw;
+    border-radius: 2.5vw;
+}
+.box1 p{
+    width: 35%;
+    line-height: 1.8vw;
+    font-size: 1.5vw;
+    opacity: 0.4;
+    margin-bottom: 2vw;
+    
+
+}
+h1{
+    width: 22vw;
+    font-size: 3vw;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+    padding-bottom: 2vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.313);
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5vw;
+    
+    
+    
+}
+.box2{
+
+    height: 30vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-top: 6vw;
+}
+.taxdiv{
+    width: 37%;
+    float: right;
+}
+.taxdiv p{
+    line-height: 1.8vw;
+    font-size: 1.5vw;
+    opacity: 0.4;
+    margin-bottom: 2vw;
+   
+}
+.box2 img{
+    height: 30vw;
+    width: 30vw;
+    border-radius: 2.5vw;
+}
+.footer{
+    display: flex;
+    height: 30vw;
+    margin-top: 7vw;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+
+}
+.common{
+    padding-top: 3.5vw;
+   
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.f1{
+    width: 30%;
+    padding-left: 7vw;
+    
+}
+ .blue{
+    color: rgb(78, 93, 192);
+    margin-bottom: 1.5vw;
+    font-size: 1.5vw;
+    width: 70%;
+    letter-spacing: 0.2vw;
+    font-family: 'Roboto', sans-serif;
+}
+ .p{
+    opacity: 0.6;
+    margin-bottom: 0.6vw;
+    font-size: 1.3vw;
+
+    /* background-color: cadetblue; */
+}
+.underline{
+    border-bottom: 1px solid rgb(78, 93, 192);
+   
+}
+.f1 img{
+    width: 7vw;
+    margin-bottom: 3vw;
+}
+.f2{
+    width: 34%;
+}
+.f2 p{
+    width: 80%;
+    line-height: 2vw;
+}
+.f3{
+    width: 10%;
+}
+.f4{
+    width: 26%;
+    display: flex;
+    padding-top: 3.5vw;
+    height: 100%;
+}
+.f4 img{
+     width: 1vw;
+
+}
+.blue1{
+    width: 3vw;
+    height: 3vw;
+    background-color: rgb(78, 93, 192);
+    margin-left: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 90px;
+}

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+
+        }
+        .main{
+            height: 100%;
+            width: 100%;
+            /* background-color: brown; */
+        }
+        .main1{
+            height: 55%;
+            width: 100%;
+           background-color: rgb(56, 55, 55);
+            display: flex;
+            flex-direction: column;
+            
+        }
+      
+        .navbar
+        {
+            width: 100%;
+            height: 50px;
+            background-color: azure;
+            display: flex;
+           
+        }
+        .navigation{
+            /* background-color: brown; */
+            height: 100%;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:10px;
+        }
+        .bo1{
+            height: 15.5px;
+            width: 15.5px;
+            background-color: rgba(198, 198, 198, 0.788);
+            border-radius: 90px;
+            border: 0.6px solid rgb(138, 136, 136);
+        }
+        .bo2{
+            height: 15.5px;
+            width: 15.5px;
+            background-color: rgba(198, 198, 198, 0.788);
+            border-radius: 90px;
+            border: 0.6px solid rgb(138, 136, 136);
+        }
+        .bo3{
+            height: 15.5px;
+            width: 15.5px;
+            background-color: rgba(198, 198, 198, 0.788);
+            border-radius: 90px;
+            border: 0.6px solid rgb(138, 136, 136);
+        }
+        .main2{
+            height: 45%;
+            width: 100%;
+            background-color: brown;
+            
+        }
+        .hover:hover{
+            background-color: red;
+        
+        }
+        .imgpart{
+            width: 100%;
+            height: calc(100% - 50px);
+            background-color: beige;
+            background-image: url(In\ the\ Moon\ 2.png);
+            /* background-attachment: fixed; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+           display: flex;
+           flex-direction: column;
+      
+          
+          
+            /* border: 2px solid black; */
+        }
+
+       
+
+        .imgpart1{
+             width: 100%;
+             height: 20%;
+             /* background-color: bisque; */
+             margin-top: 30px;
+             display: flex;
+             justify-content: space-between;
+             color: aliceblue;
+        }
+        .box1{
+            height: 100%;
+            width: 100px;
+            /* background-color: rgb(122, 100, 100); */
+            margin-left: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+            
+        }
+        .round{
+            height: 30px;
+            width: 30px;
+            background-color: red;
+            border-radius: 90%;
+            box-shadow: 1px 1px 20px rgb(255, 177, 177);
+            color: aliceblue;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 650;
+           
+        }
+        
+        .box2{
+            height: 100%;
+            width: 100px;
+            /* background-color: rgb(122, 100, 100); */
+            margin-right: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+           
+
+        }
+        .round1{
+            height: 30px;
+            width: 30px;
+            background-color:white;
+            border-radius: 90%;
+            color: aliceblue;
+            text-align: center;
+            padding-top: 2.8px;
+            font-size: 20px;
+            font-weight: 650;
+            color: #000;
+           
+        }
+        .imgpart2{
+            /* background-color: cornflowerblue; */
+            width: 100%;
+            height: 45%;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .i1{
+            height: 100%;
+            width: 30%;
+            font-size: 50px;
+            font-weight: bolder;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            /* background-color: aqua; */
+        }
+        .i2{
+            height: 100%;
+            width: 30%;
+            /* background-color: rgb(157, 0, 255); */
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        .i3{
+            height: 100%;
+            width: 30%;
+            /* background-color: rgb(143, 134, 79); */
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        .i4div{
+            display: flex;
+        }
+        .i4{
+            height: 100%;
+            width: 30%;
+            /* background-color: rgb(199, 225, 94); */
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 30px;
+             color: aliceblue;
+            
+
+        }
+        .common{
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+           
+        }
+        .common1{
+            height: 100%;
+            width: 24%;
+        }
+        .main2{
+            display: flex;
+        }
+      
+        .main22{
+             background-color: chocolate;
+             background-image: url(https://media.istockphoto.com/id/1284203003/photo/male-hiker-uses-cell-phone-on-mountain-ridge-crest.webp?b=1&s=170667a&w=0&k=20&c=5kp0t8lHyB8w2c_ew_R8nI7npdSarXWrw4nOkWWcaw4=);
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            }
+        .main32{
+            background-color: rgb(81, 9, 9);
+            display: flex;
+            flex-direction: column;
+        }
+        .minbox31{
+            width: 100%;
+            height: 50%;
+            background-color: rgb(99, 15, 15);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .minbox32{
+            width: 100%;
+            height: 50%;
+            background-image: url(https://media.istockphoto.com/id/1009574250/photo/abstract-circles.jpg?s=612x612&w=0&k=20&c=AeWaHI6AsSk-9Q-joUmIIIOrr06MT22mVHMljpMmQc4=);
+            background-position: center;
+            background-repeat: no-repeat;
+         
+            background-size: cover;
+       
+        }
+        .main42{
+            height: 100%;
+            width: 28%;
+            background-color: fuchsia;
+        }
+        .maindiv{
+            color: aliceblue;
+            font-size: 30px;
+        }
+        .subdiv{
+            color: aliceblue;
+            font-size: 20px;
+         
+        }
+        .main12{
+             background-color: rgb(246, 255, 252);
+             color: #3b39391e;
+             display: flex;
+             flex-direction: column;
+             justify-content: space-evenly;
+        }
+        .section1{
+               display: flex;
+               flex-direction: column;
+               /* background-color: crimson; */
+               margin: 30px;
+               font-size: 25px;
+               padding: auto;
+               color: gray;
+        }
+        .section2{
+            /* background-color: crimson; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rount22{
+            height: 30px;
+            width: 30px;
+            background-color: rgb(213, 210, 210);
+            color: #000;
+            border-radius: 90%;
+            margin: 10px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bolder;
+            
+        }
+        .main42{
+            background-color: rgb(11, 11, 23);
+            display: flex;
+            flex-direction: column;
+        }
+        .main421{
+            width: 100%;
+            height: 45px;
+            /* border:2px solid aliceblue; */
+            color: aliceblue;
+            font-size: 30px;
+            margin-top: 20px;
+            padding-left: 20px;
+            
+        }
+        .main422{
+            width: 100%;
+            height: 150px;
+            /* border:2px solid aliceblue; */
+            color: aliceblue;
+            display: flex;
+            font-size: 22px;
+           justify-content: center;
+            flex-direction: column;
+           padding-left: 20px;
+            
+        }
+        .main422 p {
+            margin: 10px;
+        }
+        .main423{
+            width: 100%;
+            height: 20px;
+            /* border:2px solid aliceblue; */
+            color: aliceblue;
+            font-size: 30px;
+            display: flex;
+            align-items:center;
+            justify-content: start;
+            padding-left: 20px;
+        
+        }
+        .div4321{
+            background-color: rgb(197, 195, 195);
+            height: 10px;
+            width: 10px;
+            border-radius: 90px;
+            margin: 8px;
+           
+        }
+        .div4321:hover{
+             background-color: crimson;
+        }
+        @media (width <= 1167px) {
+             *html,body{
+                width: 100%;
+                height: 200%;
+             }   
+             .main{
+                width: 100%;
+                height: 200%;
+             }     
+             .main1{
+                width: 100%;
+                height: 55%;
+             }
+             .main2{
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+             }
+             .common1{
+               width: 100%;
+            }
+            .main12{
+                height: 300px;
+            }
+            .main22{
+                height: 350px;
+
+      
+            }
+            .main32{
+                height: 300px;
+
+            }
+             .main42{
+                width: 100%;
+                height: 350px;
+             }
+             .main421{
+                margin-top: 55px;
+                
+             }
+             .imgpart2{
+              
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+ 
+        }
+        .i1{
+            margin-top: 30px;
+        }
+        .i2{
+            margin: 25px;
+        }
+        .i3{
+            margin: 25px;
+        }
+        .i3\4{
+            margin: 25px;
+        }
+    }
+
+
+        
+       
+
+       
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="main1">
+            <div class="navbar">
+                <div class="navigation">
+                   <div class="bo1 hover"></div>
+                   <div class="bo2 hover"></div>
+                   <div class="bo3 hover"></div>
+                </div>
+               
+            </div>
+            <div class="imgpart">
+              <div class="imgpart1">
+                <div class="box1">
+                    <div class="round">f</div>
+                    <p>ferux</p>
+                </div>
+                <div class="box2">
+                    <div class="round1"><i class="ri-search-eye-line"></i></div>
+                     <div class="round1">
+                        <i class="ri-home-2-line"></i></i>
+                    </div>
+                </div>
+              </div>
+              <div class="imgpart2">
+                <div class="i1 common">Noise</div>
+                <div class="i2 common">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, atque.</div>
+                <div class="i3 common">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, corporis harum.</div>
+                <div class="i4 ">
+                    <div class="i4div">
+                    <i class="ri-instagram-line"></i>
+                    <i class="ri-twitter-line"></i>
+                    <i class="ri-map-pin-line"></i>
+                </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="main12 common1">
+                <div class="section1">
+                    <p>currect</p>
+                    <p>performance as noice</p>
+                </div>
+                <div class="section2">
+                   <div class="rount22"><i class="ri-arrow-left-s-line"></i></div>
+                   <div class="rount22"><i class="ri-arrow-right-s-line"></i></div>
+                </div>
+            </div>
+            <div class="main22 common1"></div>
+            <div class="main32 common1">
+                <div class="minbox31">
+                    <div class="maindiv">
+                        <p>Art</p>
+                    </div>
+                    <div class="subdiv">
+                    <p>Art is buty of word</p>
+                    <p>Art is gift of gord</p>
+                </div>
+                </div>
+                <div class="minbox32"></div>
+            </div>
+            <div class="main42">
+                <div class="main421"><P>Latest</P></div>
+                <div class="main422">
+                   <p> <i class="ri-account-box-line"></i> Lorem ipsum dolor sit amet.</p>
+                    <p> <i class="ri-account-circle-line"></i> Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="main423">
+                    <div class="div4321"></div>
+                    <div class="div4321"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

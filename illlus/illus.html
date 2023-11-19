@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background: hsla(13, 68%, 70%, 1);
+
+background: linear-gradient(225deg, hsla(13, 68%, 70%, 1) 0%, hsla(28, 95%, 84%, 1) 100%);
+
+background: -moz-linear-gradient(225deg, hsla(13, 68%, 70%, 1) 0%, hsla(28, 95%, 84%, 1) 100%);
+
+background: -webkit-linear-gradient(225deg, hsla(13, 68%, 70%, 1) 0%, hsla(28, 95%, 84%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#E6947D", endColorstr="#FDD5B1", GradientType=1);
+
+        }
+
+        .main {
+            width: 100%;
+            height: 100%;
+            background: hsla(13, 68%, 70%, 1);
+
+            background: linear-gradient(225deg, hsla(13, 68%, 70%, 1) 0%, hsla(28, 95%, 84%, 1) 100%);
+
+            background: -moz-linear-gradient(225deg, hsla(13, 68%, 70%, 1) 0%, hsla(28, 95%, 84%, 1) 100%);
+
+            background: -webkit-linear-gradient(225deg, hsla(13, 68%, 70%, 1) 0%, hsla(28, 95%, 84%, 1) 100%);
+
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#E6947D", endColorstr="#FDD5B1", GradientType=1);
+        }
+
+        .navbar {
+            background: hsla(13, 68%, 70%, 1);
+
+            background: linear-gradient(225deg, hsla(13, 68%, 70%, 1) 0%, hsla(28, 95%, 84%, 1) 100%);
+
+            background: -moz-linear-gradient(225deg, hsla(13, 68%, 70%, 1) 0%, hsla(28, 95%, 84%, 1) 100%);
+
+            background: -webkit-linear-gradient(225deg, hsla(13, 68%, 70%, 1) 0%, hsla(28, 95%, 84%, 1) 100%);
+
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#E6947D", endColorstr="#FDD5B1", GradientType=1);
+            height: 90px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 35px;
+        }
+
+        .navbar p {
+            font-size: 35PX;
+            color: rgb(30, 54, 70);
+        }
+
+        .navbar p span {
+            font-weight: bolder;
+        }
+
+
+        .navbar .navbarlink a {
+            text-decoration: none;
+            font-size: 22px;
+            padding: 0 12px;
+            color: rgb(30, 54, 70);
+
+        }
+        .navbar .navbarlink i{
+            display: none;
+        }
+
+        .navbar .navbarlink a:hover {
+            border-bottom: 2.5px solid black;
+        }
+
+        .maincontent {
+            display: flex;
+            flex-direction: column;
+            background: hsla(10, 72%, 73%, 1);
+
+            background: hsla(13, 68%, 70%, 1);
+
+            background: hsla(13, 68%, 70%, 1);
+
+            background: linear-gradient(225deg, hsla(13, 68%, 70%, 1) 0%, hsla(28, 95%, 84%, 1) 100%);
+
+            background: -moz-linear-gradient(225deg, hsla(13, 68%, 70%, 1) 0%, hsla(28, 95%, 84%, 1) 100%);
+
+            background: -webkit-linear-gradient(225deg, hsla(13, 68%, 70%, 1) 0%, hsla(28, 95%, 84%, 1) 100%);
+
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#E6947D", endColorstr="#FDD5B1", GradientType=1);
+
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#E6947D", endColorstr="#FDD5B1", GradientType=1);
+
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#EC9B8A", endColorstr="#FDD5B1", GradientType=1);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .maincontent h1 {
+            font-size: 50px;
+            font-weight: 540;
+            color: rgb(47, 70, 86);
+        }
+
+        .maincontent .para {
+            text-align: center;
+            width: 35%;
+            /* background-color: rgb(82, 61, 65); */
+            margin: 30px 0px;
+            font-size: 25px;
+            color: rgb(39, 55, 71);
+        }
+
+        button {
+            padding: 13px 35px;
+            background-color: rgb(47, 70, 86);
+            color: aliceblue;
+            border-radius: 25px;
+            font-size: 18px;
+            border: none;
+        }
+
+        .ilus {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .ilus img {
+            width: 100%;
+            height: 600px;
+
+        }
+
+        .footer {
+            width: 100%;
+            background-color: rgb(11, 18, 28);
+            /* background-color: antiquewhite; */
+            height: 600px;
+            color: #FCD6BB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .f1 {
+            width: 50%;
+            height: 80%;
+            /* background-color: blueviolet; */
+
+            padding-right: 30px;
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: end;
+
+        }
+
+        .f1>h4 {
+            padding-bottom: 20px;
+            font-size: 35.9px;
+            /* border: 2px solid whitesmoke; */
+            width: 50%;
+            text-align: end;
+            color: rgb(198, 115, 99);
+            position: relative;
+            border-bottom: 2px solid rgb(96, 156, 193);
+
+        }
+
+        .f1>p {
+
+            padding-top: 40px;
+            font-size: 22.9px;
+            /* border: 2px solid whitesmoke; */
+            width: 30%;
+            text-align: end;
+            color: rgb(252, 214, 187);
+
+        }
+
+        .f2 {
+            width: 50%;
+            height: 80%;
+            /* background-color: rgb(55, 47, 63); */
+            border-left: 4.5px solid rgb(135, 174, 203);
+            padding-left: 30px;
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+        }
+        .imgclass{
+          
+            height: 60%;
+            /* border: 2px solid white; */
+            margin: 15px;
+        /* mix-blend-mode: multiply; */
+            
+        }
+        .class2{
+            /* border: 2px solid white; */
+            height: 80%;
+            display: flex;
+            flex-direction: column ;
+            align-items: start;
+            justify-content: center;
+        }
+        .class2 .h4{
+            font-size: 25px;
+           
+        }
+        .class2 .p{
+            font-size: 20px;
+        }
+        .f21{
+            width: 60%;
+            height: 30%;
+            display: flex;
+           
+            margin-top: 10px;
+        } 
+        @media ( width < 1077px) {
+            .footer {
+                 /* background-color: aquamarine; */
+                 height:auto;
+                 flex-direction: column;
+                 align-items: start;
+                
+            }
+            .f1{
+                /* background-color:darkblue; */
+                height: auto;
+                width: 100%;
+                justify-content: start;
+                align-items: start;
+
+            }
+            .f1>h4 {
+            padding-bottom: 20px;
+            font-size: 35.9px;
+            /* border: 2px solid whitesmoke; */
+            width: 50%;
+            text-align: start;
+            color: rgb(198, 115, 99);
+            padding-left: 30px;
+            border-bottom: 2px solid rgb(96, 156, 193);
+
+        }
+
+        .f1>p {
+             padding-top: 10px;
+             padding-bottom: 30px;
+            /* background-color: crimson; */
+            font-size: 22.9px;
+            /* border: 2px solid whitesmoke; */
+            width: 35.9%;
+            text-align: start;
+            color: rgb(252, 214, 187);
+            padding-left: 30px;
+
+        }
+        .f2 {
+            width: 80%;
+            height: auto;
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            border-top: 4.5px solid rgb(135, 174, 203);
+            border-left: none;
+        }
+        .imgclass{
+          
+          height: 85px;
+          margin-right: 20px;
+          
+      }
+      .f21{
+            width: 100%;
+            height: 30%;
+            display: flex;
+            margin-top: 20px;
+            margin-top: 28px;
+            /* background-color: aquamarine; */
+        } 
+        .class2{
+            justify-content: center;
+        }
+        
+        }
+        @media (width<= 761px) {
+            .f1>h4 
+            {
+                width: 70%;
+            }
+            .f1>p {
+            
+                width: 50%;
+            }
+            .navbar .navbarlink a {
+            display: none;
+           
+           }
+           .navbarlink{
+            /* background-color: aqua; */
+            height: 65px;
+            display: flex;
+            align-items: center;
+           }
+           .navbar .navbarlink i{
+             font-size: 40px;
+             font-weight: bolder;
+             display: inline;
+             margin-right: 50px;
+             transition-property: all;
+             transition-duration: 1.5s;
+
+           }
+           .navbar .navbarlink i:hover{
+            
+            transform: rotate(90deg);
+          
+
+           }
+          
+           .maincontent h1 {
+            font-size: 45px;
+            font-weight: 540;
+            color: rgb(47, 70, 86);
+            /* background-color: brown; */
+            margin-top: 10px;
+        }
+        .maincontent .para{
+            /* background-color: crimson; */
+            width: 60%;
+        }
+           
+            
+            
+        }
+        @media (width <= 480px) {
+            .navbar .navbarlink i{
+             font-size: 33px;
+             margin-right: 30px;
+           }
+           .maincontent h1 {
+            font-size: 35px;
+    
+        }
+
+        }
+        @media (width <= 368px) {
+            .navbar .navbarlink i{
+             font-size: 28px;
+            
+           }
+           .navbar {
+            padding-right: 2px;
+            
+           }
+           .maincontent h1 {
+            font-size: 30px;
+    
+        }
+        .f1>h4 
+            {
+                width: 80%;
+            }
+            .f1>p {
+            
+                width: 60%;
+            }
+
+        }
+        @media (width <= 325px) {
+            .navbar{
+             flex-wrap: wrap;
+             padding: 30px;
+             align-content: start;
+             width: 100%;
+             height: auto;
+            }
+           
+        }
+        @media (width <= 208px){
+            *{
+                font-size: auto;
+                overflow: auto;
+            }
+            img{
+            width: auto;
+            height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <p><span>SNAP</span>SOUND</p>
+            <div class="navbarlink">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Process</a>
+                <a href="#">Profile</a>
+                <a href="#">Content</a>
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+        <div class="maincontent">
+            <h1>THE STORY TAILIER</h1>
+            <div class="para">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus aliquid perferendis pariatur
+                    veniam accusantium ab officiis. Sequi quasi optio tempore totam obcaecati, sed iste unde!</p>
+            </div>
+            <button>Exploe now</button>
+        </div>
+        <div class="ilus">
+            <img src="nature.jpg" />
+        </div>
+        <div class="footer">
+            <div class="f1">
+                <h4>Lorem, ipsum dolor sit amet constur adipi</h4>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta blanditiis nihil officia modi dolore
+                    qui.</p>
+
+            </div>
+            <div class="f2">
+                <div class="f21">
+                    <img src="kind.png" class="imgclass">
+                    <div class="class2">
+                    <div class="h4">Lorem ipsum dolor</div>
+                    <div class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                </div>
+                </div>
+                <div class="f21">
+                    <img src="neural.png" class="imgclass">
+                    <div class="class2">
+                    <div class="h4">Lorem ipsum dolor</div>
+                    <div class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                </div>
+            </div>
+            <div class="f21">
+                <img src="yoga.png" class="imgclass">
+                <div class="class2">
+                <div class="h4">Lorem ipsum dolor</div>
+                <div class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

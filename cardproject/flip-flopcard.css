@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(90deg,black,rgb(36, 35, 35),gray);
+}
+.card{
+    height: 250px;
+    width: 170px;
+    position: relative;
+    transform: all;
+    transition-duration: 2s;
+    transform-style: preserve-3d;
+    margin: 20px;
+}
+.card:hover{
+    transform: perspective(500px) rotatey(180deg);
+    
+}
+.front,.back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+   
+   
+}
+.front{
+    background-image: url(vecteezy_ace-cardhand-drawn-illustration_8991565.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6px;
+    z-index: 1;
+    backface-visibility: hidden;
+ 
+}
+.back{
+    background-image: url(https://i.pinimg.com/564x/1e/12/48/1e124887a5ce4bdf6a60cc16558922be.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    border-radius: 6px;
+    transform: rotatey(180deg);
+}
+
+#k .back{
+    background-image: url(https://i.pinimg.com/736x/05/42/bf/0542bf18697e6304dbe4b84278d05994.jpg);
+}
+
+#q .back{
+    background-image: url(https://i.pinimg.com/originals/eb/2b/6e/eb2b6e338dcc3388619d7bfee199ccd3.png);
+}
+
+#j .back{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/English_pattern_jack_of_spades.svg/1200px-English_pattern_jack_of_spades.svg.png);
+}

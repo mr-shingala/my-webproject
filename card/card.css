@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.parent{
+    height: 350px;
+    width: 370px;
+    margin-top: 100px;
+    margin-left: 100px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5.5px;
+    box-shadow: 0 0 10px 5px #0000005d;
+}
+
+.img{
+    width: 92%;
+    height: 61%;
+    /* background-color: aquamarine; */
+    background-image: url("https://codehelp.s3.ap-south-1.amazonaws.com/Web_Dev_670f900667.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 5.5px;
+
+}
+.writing{
+    width: 92%;
+    height: 39%;
+    /* background-color: rgb(172, 127, 255); */
+    margin-top: 13px;
+    border-radius: 5.5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5.5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+ 
+.div1{
+    height: 65%;
+    width: 100%;
+    /* background-color: chocolate; */
+    padding-bottom: 8.9px;
+    font-size: 1.1rem;
+    line-height: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.233);
+}
+
+.div2{
+    height: 35%;
+    width: auto;
+    display: flex;
+    gap:10px;
+    align-items: end;
+    padding-bottom: 5px;
+   
+}
+.div22{
+    height: auto;
+    width: auto;
+    font-size: 16px;
+    /* background-color: bisque; */
+    padding-left: 3px;
+}
+
+.div222{
+    opacity: 0.6;
+}
+
+.divoff{
+    background-color: rgb(19, 175, 97);
+    color: aliceblue;
+    font-size: 13px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+
+
