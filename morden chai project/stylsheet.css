@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+   background-color: rgb(20, 12, 12);
+    padding-top: 50px;
+    color: white;
+    
+}
+.sub-container{
+    width: 840px;
+    margin: 0 auto;
+ 
+
+}
+.wrap-class{
+    border: 2px solid gold;
+}
+.wrap-class label{
+    opacity: 0.5;
+}
+.wrap-class input:checked + label{
+opacity: 1;
+}
+.wrap-class label:hover{
+    opacity: 0.7;
+}
+.taxt1{
+ 
+    width: 320px;
+    height: 80px;
+    border:1px solid red;
+    position: relative;
+}
+.taxt1 p{
+    position: relative;
+}
+.taxt2{
+    display: flex;
+    overflow: hidden;
+    color: aqua;
+    top: 25px;
+    /* position: relative;
+    top: -80px; */
+    position: absolute;
+}
+.tax2-flex{
+    border: 2px solid pink;
+}
+.

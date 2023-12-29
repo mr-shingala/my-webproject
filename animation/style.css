@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header,.footer{
+    height: 6%;
+    width: 100%;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0PX 22.5PX 0PX 22.5PX;
+    font-size: 12PX;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+}
+
+.bold{
+    font-weight: 900;
+}
+.latter{
+    letter-spacing: 5px;
+}
+.orang{
+    color: orange;
+    font-weight: 900;
+}
+.content{
+    height: calc(100% - 12%);
+    width: 100%;
+    /* background-color: brown; */
+}  
+.opacity{
+    color: rgba(0, 0, 0, 0.491);
+    cursor: pointer;
+    padding: 5px;
+}
+.opacity:hover{
+     color: black;
+} 
+.word{
+    word-spacing: 7px;
+}
+.last{
+    color: rgb(78, 78, 78);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.content1{
+    width:100%;
+    height:25%;
+   /* background-color: chocolate; */
+   display: flex;
+   align-items: end;
+
+}
+.video{
+ 
+    width: 5%;
+    height: 60%;
+    font-size: 13PX;
+  
+}
+.cen{
+    
+    width: 50%;
+    height: 60%;
+    margin-left: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-family: 'Dhurjati', sans-serif;
+    line-height: 20px;
+    font-size: 25px;
+    z-index: 12;
+
+}
+.content::before{
+    background-image: url(https://images.unsplash.com/photo-1669479033025-01bc44921fff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNsb3RoJTIwZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fHww);
+    height: 350px;
+    width: 250px;
+    content: "";
+    position: absolute;
+    left: 35%;
+    background-size: cover;
+    animation-name: rotate;
+    animation-timing-function:ease;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    z-index: 11;
+}
+@keyframes rotate {
+    0%{transform: translate(0px,0px) rotateX(20deg) skewX(3deg);
+        transform-style: preserve-3d;}
+    30%{transform: translate(180px,140px) rotateY(25deg) skewY(2deg);
+        transform-style: preserve-3d;}
+    60%{transform: translate(-180px,140px) rotateY(-25deg) skewY(2deg);
+        transform-style: preserve-3d;}
+    100%{transform: translate(0px,0px) rotateX(20deg) skewX(3deg);
+        transform-style: preserve-3d;}
+
+}
+.content2{
+    width:100%;
+    height:60%;
+   /* background-color: rgb(30, 210, 180); */
+   display: flex;
+   flex-direction: column;
+}
+.c2{
+    display: flex;
+    width: 100%;
+    height: 35%;
+    /* background-color: blue; */
+    font-size: 100px;
+    word-spacing: 50px;
+    font-weight: 900;
+    animation-name: rotate1;
+    animation-timing-function:ease;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    
+    
+}
+@keyframes rotate1 {
+    0%{ transform: translatex(100%);}
+    100%{  transform: translatex(-100%);}
+
+}
+.c4{
+    display: flex;
+    width: 100%;
+    height: 35%;
+    /* background-color: blue; */
+    font-size: 100px;
+    word-spacing: 50px;
+    font-weight: 900;
+    animation-name: rotate2;
+    animation-timing-function:ease;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    
+}
+@keyframes rotate2 {
+    0%{ transform: translatex(-100%);}
+    100%{  transform: translatex(100%);}
+
+}
+.c3{
+    display: flex;
+    width: 100%;
+    height: 35%;
+    font-size: 100px;
+    word-spacing: 50px;
+    font-weight: 900;
+    animation-name: rotate3;
+    animation-timing-function:ease;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0.1s;
+    color: rgba(0, 0, 0, 0.336);
+    z-index: 12;
+}
+@keyframes rotate3 {
+    0%{ transform: translatex(100%);}
+    100%{  transform: translatex(-100%);}
+
+}
+.content3{
+    width:100%;
+    height:15%;
+   /* background-color: rgb(210, 30, 30); */
+}
+.content3 p{
+    width: 22%;
+    font-size: 14px;
+    font-weight: 900;
+    margin-top: 20px;
+    line-height: 12.5px;
+}

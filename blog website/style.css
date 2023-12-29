@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+   
+}
+.container{
+
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: auto;
+    background-color: white;
+}
+.navbar{
+
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+     margin-left: 25px;
+     margin-right: 42px;
+     margin-top: 20px;
+     margin-bottom: 30px;
+}
+.navbar h1{
+    color: rgba(39, 39, 39, 0.724);
+}
+.ri-search-line{
+    color: rgb(125, 125, 125);
+    font-weight: 900;
+    font-size: 18px;
+}
+.navbar button{
+    padding: 5px 20px;
+    color: rgb(125, 125, 125);
+    font-weight: 700;
+    background-color: rgb(243, 244, 244);
+    border: none;
+
+}
+.grid-blog{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,545px));
+    gap: 30px 20px;
+    width: 100%;
+    
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 43px;
+    justify-content: center;
+
+    padding-bottom: 30px;
+}
+.box{
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.311);
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    padding: 18px;
+    justify-content: space-between;
+    
+}
+.class1{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+#green{
+    color: green;
+    margin-bottom: 10px;
+}
+#blue{
+    color: rgb(0, 0, 255);
+    margin-bottom: 10px;
+
+}
+.gray{
+      color: rgb(180, 176, 176);
+      
+}
+.magin{
+    margin-top: 8px;
+    /* background-color: aqua; */
+    width: 70%;
+     line-height: 20px;
+    font-size: 14px;
+    color: rgba(48, 49, 49, 0.646);
+}
+@media (max-width:412px ) {
+    .navbar{
+       
+        flex-direction: column;
+     
+        
+    }
+    .navbar h1{
+       margin-bottom: 10px;
+       margin-top: 10px;
+    }
+    .box{
+        height: 250px;
+    }
+
+}
+@media (max-width:408px ) {
+    .box{
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.311);
+        display: flex;
+        flex-direction: column;
+        height: 260px;
+        padding: 18px;
+        justify-content: space-between;
+        
+    }
+
+}
+@media (max-width:197px ) {
+html,body{
+    overflow: auto;
+}
+
+}

@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+   
+}
+.container1{
+
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: auto;
+    background-color: white;
+
+    
+}
+.class2{
+    display: flex;
+
+}
+.subclass1{
+    width: 70%;
+
+    padding: 25px;
+}
+.subclass1 ul,ol{
+    padding-left: 35px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.subclass2{
+    width: 30%;
+  
+    display: flex;
+    flex-direction: column;
+}
+.side1{
+    background-color: rgb(243, 244, 244);
+   overflow: auto;
+    padding: 20px;
+    margin-bottom: 30px;
+    
+}
+.side1 p{
+    color: rgb(70, 70, 70);
+    width: 80%;
+}
+.side2,.side3{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 30px;
+    line-height: 22.5px;
+}
+.subclass2 a{
+     
+    font-size: 15px;
+}
+.sh2{
+    margin-bottom: 10px;
+}
+
+.para1-top-space{
+    margin-bottom: 15px;
+    margin-top: 21px;
+}
+.para1-top-space1{
+    margin-bottom: 15px;
+}
+.box1{
+    border: 1px solid rgba(0, 0, 0, 0.719);
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+ .xmargin{
+     margin-top: 22.5px;
+}
+.class-button{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+   
+}
+.class-button button{
+    border-radius: 16px;
+    padding: 6px;
+    width: 90px;
+  border: 1px solid rgb(158, 157, 157);
+   
+}
+@media (max-width:400px) {
+    .class2{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .subclass1,.subclass2{
+   width: 100%;
+    }
+}
+@media (max-width:157px) {
+  html,body{
+    overflow:auto;
+  }
+}
