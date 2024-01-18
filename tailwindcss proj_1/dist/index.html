@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razopay</title>
+    <link rel="shortcut icon" href="/assets/favicon-6NXIUU2i.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" crossorigin href="/assets/index-qqJsN-7W.css">
+</head>
+
+<body>
+    <div class="wrape w-full h-full  overflow-hidden">
+
+        <section class="bg-deepblue ">
+            <!-- navbar -->
+            <nav class="bg-deepblue w-[73%] flex text-slate-50 pt-5 pb-2 mx-auto justify-between items-center smax:w-[90%] emax:w-[100%]">
+
+
+                <!-- right section -->
+                <div class="flex gap-5 cursor-pointer">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTg5NiA0MDEiIGZvY3VzYWJsZT0iZmFsc2UiIGNsYXNzPSJjaGFrcmEtaWNvbiBjc3MtMXh5NjJsZiIgZmlsbD0nI2ZmZicgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSIjMzM5NUZGIiBkPSJNMTIyLjYzIDEwNS43bC0xNS43NSA1Ny45NyA5MC4xNS01OC4zLTU4Ljk2IDIxOS45OCA1OS44OC4wNUwyODUuMDUuNDgiPjwvcGF0aD48cGF0aCBkPSJNMjUuNiAyMzIuOTJMLjggMzI1LjRoMTIyLjczbDUwLjIyLTE4OC4xM0wyNS42IDIzMi45Mm00MjYuMzItODEuNDJjLTMgMTEuMTUtOC43OCAxOS4zNC0xNy40IDI0LjU3LTguNiA1LjIyLTIwLjY3IDcuODQtMzYuMjUgNy44NGgtNDkuNWwxNy4zOC02NC44aDQ5LjVjMTUuNTYgMCAyNi4yNSAyLjYgMzIuMDUgNy45IDUuOCA1LjMgNy4yIDEzLjQgNC4yMiAyNC42bTUxLjI1LTEuNGM2LjMtMjMuNCAzLjctNDEuNC03LjgyLTU0LTExLjUtMTIuNS0zMS42OC0xOC44LTYwLjQ4LTE4LjhIMzI0LjRsLTY2LjUgMjQ4LjFoNTMuNjdsMjYuOC0xMDBoMzUuMmM3LjkgMCAxNC4xMiAxLjMgMTguNjYgMy44IDQuNTUgMi42IDcuMjIgNy4xIDguMDQgMTMuNmw5LjU4IDgyLjZoNTcuNWwtOS4zMi03N2MtMS45LTE3LjItOS43Ny0yNy4zLTIzLjYtMzAuMyAxNy42My01LjEgMzIuNC0xMy42IDQ0LjMtMjUuNGE5Mi42IDkyLjYgMCAwIDAgMjQuNDQtNDIuNW0xMzAuNDYgODYuNGMtNC41IDE2LjgtMTEuNCAyOS41LTIwLjczIDM4LjQtOS4zNCA4LjktMjAuNSAxMy4zLTMzLjUyIDEzLjMtMTMuMjYgMC0yMi4yNS00LjMtMjctMTMtNC43Ni04LjctNC45Mi0yMS4zLS41LTM3LjggNC40Mi0xNi41IDExLjQ3LTI5LjQgMjEuMTctMzguNyA5LjctOS4zIDIxLjA0LTEzLjk1IDM0LjA2LTEzLjk1IDEzIDAgMjEuOSA0LjUgMjYuNCAxMy40MyA0LjYgOC45NyA0LjcgMjEuOC4yIDM4LjV6bTIzLjUyLTg3LjhsLTYuNzIgMjUuMWMtMi45LTktOC41My0xNi4yLTE2Ljg1LTIxLjYtOC4zNC01LjMtMTguNjYtOC0zMC45Ny04LTE1LjEgMC0yOS42IDMuOS00My41IDExLjctMTMuOSA3LjgtMjYuMSAxOC44LTM2LjUgMzMtMTAuNCAxNC4yLTE4IDMwLjMtMjIuOSA0OC40LTQuOCAxOC4yLTUuOCAzNC4xLTIuOSA0Ny45IDMgMTMuOSA5LjMgMjQuNSAxOSAzMS45IDkuOCA3LjUgMjIuMyAxMS4yIDM3LjYgMTEuMmE4Mi40IDgyLjQgMCAwIDAgMzUuMi03LjcgODIuMTEgODIuMTEgMCAwIDAgMjguNC0yMS4ybC03IDI2LjE2aDUxLjlMNzA5LjMgMTQ5aC01MnptMjM4LjY1IDBINzQ0Ljg3bC0xMC41NSAzOS40aDg3LjgybC0xMTYuMSAxMDAuMy05LjkyIDM3aDE1NS44bDEwLjU1LTM5LjRoLTk0LjFsMTE3Ljg4LTEwMS44bTE0Mi40IDUyYy00LjY3IDE3LjQtMTEuNiAzMC40OC0yMC43NSAzOS05LjE1IDguNi0yMC4yMyAxMi45LTMzLjI0IDEyLjktMjcuMiAwLTM2LjE0LTE3LjMtMjYuODYtNTEuOSA0LjYtMTcuMiAxMS41Ni0zMC4xMyAyMC44Ni0zOC44NCA5LjMtOC43NCAyMC41Ny0xMy4xIDMzLjgyLTEzLjEgMTMgMCAyMS43OCA0LjMzIDI2LjMgMTMuMDUgNC41MiA4LjcgNC40OCAyMS42Ny0uMTMgMzguODdtMzAuMzgtODAuODNjLTExLjk1LTcuNDQtMjcuMi0xMS4xNi00NS44LTExLjE2LTE4LjgzIDAtMzYuMjYgMy43LTUyLjMgMTEuMWExMTMuMDkgMTEzLjA5IDAgMCAwLTQxIDMyLjA2Yy0xMS4zIDEzLjktMTkuNDMgMzAuMi0yNC40MiA0OC44LTQuOSAxOC41My01LjUgMzQuOC0xLjcgNDguNzMgMy44IDEzLjkgMTEuOCAyNC42IDIzLjggMzIgMTIuMSA3LjQ2IDI3LjUgMTEuMTcgNDYuNCAxMS4xNyAxOC42IDAgMzUuOS0zLjc0IDUxLjgtMTEuMTggMTUuOS03LjQ4IDI5LjUtMTguMSA0MC44LTMyLjEgMTEuMy0xMy45NCAxOS40LTMwLjIgMjQuNC00OC44IDUtMTguNiA1LjYtMzQuODQgMS44LTQ4LjgtMy44LTEzLjktMTEuNy0yNC42LTIzLjYtMzIuMDVtMTg1LjEgNDAuOGwxMy4zLTQ4LjFjLTQuNS0yLjMtMTAuNC0zLjUtMTcuOC0zLjUtMTEuOSAwLTIzLjMgMi45NC0zNC4zIDguOS05LjQ2IDUuMDYtMTcuNSAxMi4yLTI0LjMgMjEuMTRsNi45LTI1LjktMTUuMDcuMDZoLTM3bC00Ny43IDE3Ni43aDUyLjYzbDI0Ljc1LTkyLjM3YzMuNi0xMy40MyAxMC4wOC0yNCAxOS40My0zMS41IDkuMy03LjUzIDIwLjktMTEuMyAzNC45LTExLjMgOC42IDAgMTYuNiAxLjk3IDI0LjIgNS45bTE0Ni41IDQxLjFjLTQuNSAxNi41LTExLjMgMjkuMS0yMC42IDM3LjgtOS4zIDguNzQtMjAuNSAxMy4xLTMzLjUgMTMuMXMtMjEuOS00LjQtMjYuNi0xMy4yYy00LjgtOC44NS00LjktMjEuNi0uNC0zOC4zNiA0LjUtMTYuNzUgMTEuNC0yOS42IDIwLjktMzguNSA5LjUtOC45NyAyMC43LTEzLjQ1IDMzLjctMTMuNDUgMTIuOCAwIDIxLjQgNC42IDI2IDEzLjkgNC42IDkuMyA0LjcgMjIuMi4yOCAzOC43bTM2LjgtODEuNGMtOS43NS03LjgtMjIuMi0xMS43LTM3LjMtMTEuNy0xMy4yMyAwLTI1Ljg0IDMtMzcuOCA5LjA2LTExLjk1IDYuMDUtMjEuNjUgMTQuMy0yOS4xIDI0Ljc0bC4xOC0xLjIgOC44My0yOC4xaC01MS40bC0xMy4xIDQ4LjktLjQgMS43LTU0IDIwMS40NGg1Mi43bDI3LjItMTAxLjRjMi43IDkuMDIgOC4yIDE2LjEgMTYuNiAyMS4yMiA4LjQgNS4xIDE4Ljc3IDcuNjMgMzEuMSA3LjYzIDE1LjMgMCAyOS45LTMuNyA0My43NS0xMS4xIDEzLjktNy40MiAyNS45LTE4LjEgMzYuMS0zMS45IDEwLjItMTMuOCAxNy43Ny0yOS44IDIyLjYtNDcuOSA0LjktMTguMTMgNS45LTM0LjMgMy4xLTQ4LjQ1LTIuODUtMTQuMTctOS4xNi0yNS4xNC0xOC45LTMyLjltMTc0LjY1IDgwLjY1Yy00LjUgMTYuNy0xMS40IDI5LjUtMjAuNyAzOC4zLTkuMyA4Ljg2LTIwLjUgMTMuMjctMzMuNSAxMy4yNy0xMy4zIDAtMjIuMy00LjMtMjctMTMtNC44LTguNy00LjktMjEuMy0uNS0zNy44IDQuNC0xNi41IDExLjQyLTI5LjQgMjEuMTItMzguNyA5LjctOS4zIDIxLjA1LTEzLjk0IDM0LjA3LTEzLjk0IDEzIDAgMjEuOCA0LjUgMjYuNCAxMy40IDQuNiA4LjkzIDQuNjMgMjEuNzYuMTUgMzguNXptMjMuNS04Ny44NWwtNi43MyAyNS4xYy0yLjktOS4wNS04LjUtMTYuMjUtMTYuOC0yMS42LTguNC01LjM0LTE4LjctOC0zMS04LTE1LjEgMC0yOS42OCAzLjktNDMuNiAxMS43LTEzLjkgNy44LTI2LjEgMTguNzQtMzYuNSAzMi45LTEwLjQgMTQuMTYtMTggMzAuMy0yMi45IDQ4LjQtNC44NSAxOC4xNy01LjggMzQuMS0yLjkgNDcuOTYgMi45MyAxMy44IDkuMjQgMjQuNDYgMTkgMzEuOSA5Ljc0IDcuNCAyMi4zIDExLjE0IDM3LjYgMTEuMTQgMTIuMyAwIDI0LjA1LTIuNTYgMzUuMi03LjdhODIuMyA4Mi4zIDAgMCAwIDI4LjMzLTIxLjIzbC03IDI2LjE4aDUxLjlsNDcuMzgtMTc2LjdoLTUxLjl6bTI2OS44Ny4wNmwuMDMtLjA1aC0zMS45Yy0xLjAyIDAtMS45Mi4wNS0yLjg1LjA3aC0xNi41NWwtOC41IDExLjgtMi4xIDIuOC0uOSAxLjQtNjcuMjUgOTMuNjgtMTMuOS0xMDkuN2gtNTUuMDhsMjcuOSAxNjYuNy02MS42IDg1LjNoNTQuOWwxNC45LTIxLjEzYy40Mi0uNjIuOC0xLjE0IDEuMy0xLjhsMTcuNC0yNC43LjUtLjcgNzcuOTMtMTEwLjUgNjUuNy05MyAuMS0uMDZoLS4wM3oiPjwvcGF0aD48L3N2Zz4=" alt="" class="w-28 mr-2 emax:scale-110 emax:pl-5">
+                    <p
+                        class="hover:underline hover:underline-offset-[1rem]  hover:decoration-skyblue  hover:decoration-[3.5px] text-[1rem] font-medium  hover:text-skyblue transition-all duration-150  xxl:hidden">
+                        Payments</p>
+                    <p
+                        class="hover:underline hover:underline-offset-[1rem] hover:decoration-skyblue  hover:decoration-[3.5px] text-[1rem] font-medium hover:text-skyblue transition-all duration-150 xxl:hidden">
+                        Banking+</p>
+                    <p class=" text-[1rem] font-medium hover:text-skyblue xxl:hidden">Credit</p>
+                    <p
+                        class="hover:underline hover:underline-offset-[1rem] hover:decoration-skyblue  hover:decoration-[3.5px] text-[1rem] font-medium hover:text-skyblue transition-all duration-150 xxl:hidden">
+                        Payroll</p>
+                    <p
+                        class="hover:underline hover:underline-offset-[1rem] hover:decoration-skyblue  hover:decoration-[3.5px] text-[1rem] font-medium hover:text-skyblue transition-all duration-150 xxl:hidden">
+                        Resourse
+                    <p
+                        class="hover:underline hover:underline-offset-[1rem] hover:decoration-skyblue  hover:decoration-[3.5px] text-[1rem] font-medium hover:text-skyblue transition-all duration-150 xxl:hidden">
+                        Support</p>
+                    <p class=" text-[1rem] font-medium hover:text-skyblue transition-all duration-150 xxl:hidden">Pricing</p>
+                </div>
+
+                <!-- left section -->
+                <div class="flex gap-6 pr-5 cursor-pointer">
+                    <i class="fa-solid fa-bars fa-xl emax:invisible invisible  smax:visible "></i>
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='28'%20height='20'%20viewBox='0%200%2028%2020'%3e%3cdefs%3e%3cfilter%20id='a'%20width='129.2%25'%20height='143.8%25'%20x='-14.6%25'%20y='-15.6%25'%20filterUnits='objectBoundingBox'%3e%3cfeOffset%20dy='1'%20in='SourceAlpha'%20result='shadowOffsetOuter1'/%3e%3cfeGaussianBlur%20in='shadowOffsetOuter1'%20result='shadowBlurOuter1'%20stdDeviation='1'/%3e%3cfeColorMatrix%20in='shadowBlurOuter1'%20result='shadowMatrixOuter1'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.12%200'/%3e%3cfeMerge%3e%3cfeMergeNode%20in='shadowMatrixOuter1'/%3e%3cfeMergeNode%20in='SourceGraphic'/%3e%3c/feMerge%3e%3c/filter%3e%3c/defs%3e%3cg%20fill='none'%20filter='url(%23a)'%20transform='translate(2%201)'%3e%3cpath%20fill='%23FAB446'%20d='M23.95%205.34H0V.44C0%20.2.18%200%20.41%200h23.13c.23%200%20.41.2.41.42v4.9z'/%3e%3cpath%20fill='%2373AF00'%20d='M23.54%2015.99H.41a.42.42%200%200%201-.41-.42v-4.9h23.95v4.9c0%20.23-.18.42-.41.42z'/%3e%3cpath%20fill='%23F5F5F5'%20d='M0%205.34h23.95v5.32H0z'/%3e%3cg%20fill='%2341479B'%20transform='translate(9.73%205.71)'%3e%3cpath%20d='M2.25%204.55A2.24%202.24%200%200%201%20.03%202.29c0-1.25%201-2.26%202.22-2.26a2.24%202.24%200%200%201%202.22%202.26c0%201.24-1%202.26-2.22%202.26zm0-4.1c-1%200-1.81.82-1.81%201.84a1.81%201.81%200%201%200%203.62.01c0-1.02-.8-1.84-1.8-1.84z'/%3e%3cellipse%20cx='2.25'%20cy='2.29'%20rx='1'%20ry='1'/%3e%3cpath%20d='M2.22%202.31l-.5-.41L.8.86.85.81l1.02.94.4.5zm0%200l.4.51%201.02.94.06-.05-.93-1.04-.5-.41z'/%3e%3cpath%20d='M2.22%202.26l.4-.5L3.65.8l.06.05-.93%201.04-.5.41zm0%200l-.5.41L.8%203.71l.05.05%201.02-.94.4-.5z'/%3e%3cpath%20d='M2.26%202.32l-.57.31-1.29.48-.03-.08%201.25-.6.61-.18z'/%3e%3cpath%20d='M2.26%202.32l.62-.19%201.24-.6-.03-.06-1.3.47-.56.31z'/%3e%3cpath%20d='M2.21%202.3l-.3-.58L1.44.41l.07-.03.59%201.26.18.63z'/%3e%3cpath%20d='M2.21%202.3l.19.63.58%201.26.07-.03-.47-1.31-.3-.58z'/%3e%3cpath%20d='M2.23%202.32l-.61-.19-1.25-.6.03-.06%201.3.47.56.31z'/%3e%3cpath%20d='M2.23%202.32l.57.31%201.3.48.02-.08-1.24-.6-.62-.18z'/%3e%3cpath%20d='M2.21%202.27l.19-.63.58-1.26.07.03-.47%201.31-.3.58zm0%200l-.3.58-.47%201.31.07.03.59-1.26.18-.63z'/%3e%3c/g%3e%3cellipse%20cx='11.98'%20cy='8'%20fill='%23F5F5F5'%20rx='1'%20ry='1'/%3e%3c/g%3e%3c/svg%3e" alt="" class="smax:hidden">
+                    <button class="text-slate-50 border border-skyblue font-bold px-4 py-2 round-sm smax:hidden">Log ln</button>
+                    <button class="bg-slate-50  text-skyblue font-bold px-5 text-[0.9rem] rounded-sm smax:hidden">Sign UP &nbsp;<i
+                            class="fa-solid fa-arrow-right fa mr-2 smax:hidden"></i></button>
+                </div>
+            </nav>
+
+            <!-- hrosection -->
+
+            <section class="bg-deepblue h-auto w-[73%]  flex justify-between mx-auto pt-5 lg:pt-10  items-center lg:flex-col">
+
+                <div class="w-[40%] lg:w-[100%]">
+                    <p class="text-slate-50 text-[41px] leading-[3rem] font-extrabold max:text-[35px] max:leading-[2.8rem] emax:w-[22px] emax:leading-[3rem]">Power your finance, grow your
+                        business</p>
+                    <div class=" bg-limegreen  p-[0.1rem] w-6 mt-7"></div>
+                    <p class="mt-8  text-slate-50/70 text-[1.2rem]">Accept payments from customers. Automate payouts to
+                        vendors & employees. Never run out of working capital.</p>
+                    <button class="px-4 py-3 bg-skyblue text-slate-50 font-bold mt-8 rounded-md max:px-3 max:py-2 max:font-semibold">Sign Up Now &nbsp;<i
+                            class="fa-solid fa-arrow-right fa mr-2"></i></button>
+
+                </div>
+
+                <!-- hreo-section-image -->
+                <div class="w-[60%] lg:pt-10 lg:w-[80%] smax:w-[100%]">
+                    <img src="/assets/hero-illustration-sUs6_8zW.jpg" alt="">
+                </div>
+            </section>
+
+        </section>
+
+        <!-- hero-section-ending-image -->
+        <section class="w-[101%] bg-white h-auto smax:w-[150%]">
+            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%201446%20199'%20focusable='false'%20class='chakra-icon%20css-1w3t3sf'%20xmlns='http://www.w3.org/2000/svg'%20preserveAspectRatio='none'%20%3e%3cpath%20d='M%20-6%2068.5%20V%200%20H%201445%20V%2091%20L%201289%20170%20L%20-6%2068.5%20Z'%20fill='%2302042B'%20%3e%3c/path%3e%3c/svg%3e" alt="" class="w-full">
+            <!-- <svg viewBox="0 0 1446 199" focusable="false" class="chakra-icon css-1w3t3sf" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M -6 68.5 V 0 H 1445 V 91 L 1289 170 L -6 68.5 Z" fill="#02042B"></path></svg> -->
+        </section>
+
+     
+        <section class="w-[full] h-auto relative">
+            <img src="data:image/png;base64,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" alt=""
+                class="absolute left-[100px] -top-[130px] z-[-10] smax:hidden">
+            <img src="data:image/png;base64,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" alt=""
+                class="absolute right-0 -rotate-[180deg] top-11 -z-[1] smax:hidden">
+            <div class="flex flex-col items-center">
+                <p class="mt-5 text-black font-extrabold text-2xl mx-auto smax:px-[4%] text-center">Accept Payments with Razorpay Payment Suite
+                </p>
+                <div class=" bg-limegreen  p-[0.1rem] w-6 mt-4 mx-auto"></div>
+            </div>
+
+            <div
+                class="flex w-[73%] h-auto mx-auto border border-lightgray mt-20 flex-col rounded bg-[url(./images/payment-suite.png)] bg-[length:53%] bg-no-repeat  bg-right relative bg-white lg:bg-[length:0]">
+            
+                <p class="text-black text-[28px] font-bold w-[55%] leading-[46px] pt-8 pl-12 pb-8 z-10 lg:w-[100%]">Supercharge your
+                    business with the all‑powerful <span class="text-skyblue">Payment Gateway</span></p>
+                <ul class="pl-14 flex flex-col justify-center ">
+                    <li
+                        class=" text-[16px] leading-[30px] before:content-[url(./images/c24.png)] before:opacity-60 flex gap-4 opacity-85">
+                        100+ Payment Methods</li>
+                    <li
+                        class=" text-[16px] leading-[30px] before:content-[url(./images/c24.png)] before:opacity-60 flex gap-4 opacity-85">
+                        Industry Leading Success Rate</li>
+                    <li
+                        class="text-[16px] leading-[30px] before:content-[url(./images/c24.png)] before:opacity-60 flex gap-4 opacity-85">
+                        Superior Checkout Experience</li>
+                    <li
+                        class=" text-[16px] leading-[30px] before:content-[url(./images/c24.png)] before:opacity-60 flex gap-4 opacity-85">
+                        Easy to Integrate</li>
+                    <li
+                        class=" text-[16px] leading-[30px] before:content-[url(./images/c24.png)] before:opacity-60 flex gap-4 opacity-85">
+                        Instant Settlements from day 1</li>
+                    <li
+                        class=" text-[16px] leading-[30px] before:content-[url(./images/c24.png)] before:opacity-60 flex gap-4 opacity-85">
+                        In-depth Reporting and Insights</li>
+                    <li
+                        class=" text-[16px] leading-[30px] before:content-[url(./images/c24.png)] before:opacity-60 flex gap-4 opacity-85">
+                        In-depth Reporting and Insights</li>
+                </ul>
+
+                <div class="flex items-center pl-14 gap-6 mb-16  smax:flex-col">
+                    <button class="px-4 py-3 bg-skyblue text-slate-50 font-bold mt-8 rounded-md ">Sign Up Now &nbsp;<i
+                            class="fa-solid fa-arrow-right fa mr-2"></i></button>
+                    <a class="mt-8 text-skyblue font-bold smax:mt-2">Know More <i
+                            class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                </div>
+            </div>
+
+
+            <div class="grid w-[73%] mx-auto h-auto grid-cols-[repeat(auto-fit,_minmax(322px,1fr))]  grid-rows-2 gap-x-9 mt-20 gap-y-9 smax:mx-3" >
+
+                <dix class="relative  h-auto group  transition duration-700 ease-in-out mycard">
+                    <div class="absolute rounded-full bg-skyblue p-2 right-0 mt-3 cardc ">
+                        <img src="https://razorpay.com/build/browser/static/payment-links.a69f2346.svg" alt=""
+                            class="scale-150">
+                    </div>
+                    <svg viewBox="0 0 338.6625061035156 225" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none" class="css-lqelpq relative stroke-gray-200 max-h-[200px]  w-[100%]">
+                        <path d="m 0 6 
+                            a 6 6 0 0 1 6 -6 
+                            h 239.66250610351562 
+                            a 16 16 0 0 1 11 5 
+                            l 77 77 
+                            a 16 16 0 0 1 5 11 
+                            v 126 
+                            a 6 6 0 0 1 -6 6 
+                            h -326.6625061035156 
+                            a 6 6 0 0 1 -6 -6 
+                            z" fill="#fff"></path>
+                    </svg>
+
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='72'%20height='54'%20fill='none'%3e%3cpath%20d='M101.641%2028.924l-21.01-22.74a5.309%205.309%200%2000-2.025-1.338%206.35%206.35%200%2000-2.549-.397%206.088%206.088%200%2000-2.46.64c-.741.377-1.354.9-1.784%201.522l-9.109%2013.164c-.447.646-1.091%201.185-1.87%201.565a6.14%206.14%200%2001-2.578.602%206.296%206.296%200%2001-2.618-.515c-.807-.353-1.49-.87-1.985-1.5L41.613%204.614c-.503-.638-1.199-1.16-2.02-1.513a6.308%206.308%200%2000-2.66-.497%206.105%206.105%200%2000-2.597.65c-.78.4-1.416.96-1.845%201.626L1.332%2051.787'%20stroke='url(%23paint0_linear)'%20stroke-width='2'%20stroke-linecap='round'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear'%20x1='69.96'%20y1='-7.211'%20x2='28.273'%20y2='65.656'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%231C90FF'/%3e%3cstop%20offset='.568'%20stop-color='%2367C5FF'/%3e%3cstop%20offset='1'%20stop-color='%2367C5FF'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="" class="absolute top-36 right-1 scale-110 card">
+                    <div class=" absolute top-0 ">
+                        <p class=" text-2xl font-extrabold pb-5 pt-5 pl-4 text-lightblack ">Payment Links</p>
+                        <p class=" leading-6 pl-4 opacity-60 pb-7 w-[90%]">Share payment link via an email, SMS,
+                            messenger, chatbot etc. and get paid immediately</p>
+                        <a class="mt-8 text-skyblue font-bold pl-4">Know More <i
+                                class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                    </div>
+                </dix>
+
+                <dix class="relative  h-auto group mycard">
+                    <div class="absolute rounded-full bg-skyblue p-2 right-0 mt-4 cardc">
+                        <img src="https://razorpay.com/build/browser/static/payment-pages.eadf7c84.svg" alt=""
+                            class="scale-150 ">
+                    </div>
+                    <svg viewBox="0 0 338.6625061035156 225" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none" class="css-lqelpq relative stroke-gray-200 max-h-[200px]  w-[100%]">
+                        <path d="m 0 6 
+                            a 6 6 0 0 1 6 -6 
+                            h 239.66250610351562 
+                            a 16 16 0 0 1 11 5 
+                            l 77 77 
+                            a 16 16 0 0 1 5 11 
+                            v 126 
+                            a 6 6 0 0 1 -6 6 
+                            h -326.6625061035156 
+                            a 6 6 0 0 1 -6 -6 
+                            z" fill="#fff"></path>
+                    </svg>
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='72'%20height='54'%20fill='none'%3e%3cpath%20d='M101.641%2028.924l-21.01-22.74a5.309%205.309%200%2000-2.025-1.338%206.35%206.35%200%2000-2.549-.397%206.088%206.088%200%2000-2.46.64c-.741.377-1.354.9-1.784%201.522l-9.109%2013.164c-.447.646-1.091%201.185-1.87%201.565a6.14%206.14%200%2001-2.578.602%206.296%206.296%200%2001-2.618-.515c-.807-.353-1.49-.87-1.985-1.5L41.613%204.614c-.503-.638-1.199-1.16-2.02-1.513a6.308%206.308%200%2000-2.66-.497%206.105%206.105%200%2000-2.597.65c-.78.4-1.416.96-1.845%201.626L1.332%2051.787'%20stroke='url(%23paint0_linear)'%20stroke-width='2'%20stroke-linecap='round'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear'%20x1='69.96'%20y1='-7.211'%20x2='28.273'%20y2='65.656'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%231C90FF'/%3e%3cstop%20offset='.568'%20stop-color='%2367C5FF'/%3e%3cstop%20offset='1'%20stop-color='%2367C5FF'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="" class="absolute top-36 right-1 scale-110 card">
+                    <div class="z-20 absolute top-0 ">
+                        <p class="z-20 text-2xl font-extrabold pb-5 pt-5 pl-4 text-lightblack">Payment Pages</p>
+                        <p class="z-20 leading-6 pl-4 opacity-60 pb-7 xxl:w-[90%]">Take your store online instantly with zero
+                            coding. Accept international & domestic payments</p>
+                        <a class="mt-8 text-skyblue font-bold pl-4 pb-4">Know More <i
+                                class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                    </div>
+                </dix>
+
+                <dix class="relative  h-auto group mycard">
+                    <div class="absolute rounded-full bg-skyblue p-0 right-0 mt-4 cardc">
+                        <img src="https://razorpay.com/build/browser/static/payment-buttons.74fc1e0f.svg" alt=""
+                            class="">
+                    </div>
+                    <svg viewBox="0 0 338.6625061035156 225" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none" class="css-lqelpq relative stroke-gray-200 max-h-[200px]  w-[100%]">
+                        <path d="m 0 6 
+                            a 6 6 0 0 1 6 -6 
+                            h 239.66250610351562 
+                            a 16 16 0 0 1 11 5 
+                            l 77 77 
+                            a 16 16 0 0 1 5 11 
+                            v 126 
+                            a 6 6 0 0 1 -6 6 
+                            h -326.6625061035156 
+                            a 6 6 0 0 1 -6 -6 
+                            z" fill="#fff"></path>
+                    </svg>
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='72'%20height='54'%20fill='none'%3e%3cpath%20d='M101.641%2028.924l-21.01-22.74a5.309%205.309%200%2000-2.025-1.338%206.35%206.35%200%2000-2.549-.397%206.088%206.088%200%2000-2.46.64c-.741.377-1.354.9-1.784%201.522l-9.109%2013.164c-.447.646-1.091%201.185-1.87%201.565a6.14%206.14%200%2001-2.578.602%206.296%206.296%200%2001-2.618-.515c-.807-.353-1.49-.87-1.985-1.5L41.613%204.614c-.503-.638-1.199-1.16-2.02-1.513a6.308%206.308%200%2000-2.66-.497%206.105%206.105%200%2000-2.597.65c-.78.4-1.416.96-1.845%201.626L1.332%2051.787'%20stroke='url(%23paint0_linear)'%20stroke-width='2'%20stroke-linecap='round'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear'%20x1='69.96'%20y1='-7.211'%20x2='28.273'%20y2='65.656'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%231C90FF'/%3e%3cstop%20offset='.568'%20stop-color='%2367C5FF'/%3e%3cstop%20offset='1'%20stop-color='%2367C5FF'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="" class="absolute top-36 right-1 scale-110 card">
+                    <div class="z-20 absolute top-0 ">
+                        <p class="z-20 text-2xl font-extrabold pb-5 pt-5 pl-4 text-lightblack group-hover:block">Payment
+                            Links</p>
+                        <p class="z-20 leading-6 pl-4 opacity-60 pb-7 w-[90%]">Create, Copy & Collect With Payment
+                            Button. Collect one time or subscription payments & more</p>
+                        <a class="mt-8 text-skyblue font-bold pl-4 pb-4">Know More <i
+                                class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                    </div>
+                </dix>
+
+                <dix class="relative  h-auto group mycard">
+                    <div class="absolute rounded-full bg-skyblue p-2 right-4 mt-0 cardc">
+                        <img src="https://razorpay.com/build/browser/static/subscriptions.c13b66c6.svg" alt=""
+                            class="scale-150 ">
+                    </div>
+                    <svg viewBox="0 0 338.6625061035156 225" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none" class="css-lqelpq relative stroke-gray-200 max-h-[200px]  w-[100%]">
+                        <path d="m 0 6 
+                            a 6 6 0 0 1 6 -6 
+                            h 239.66250610351562 
+                            a 16 16 0 0 1 11 5 
+                            l 77 77 
+                            a 16 16 0 0 1 5 11 
+                            v 126 
+                            a 6 6 0 0 1 -6 6 
+                            h -326.6625061035156 
+                            a 6 6 0 0 1 -6 -6 
+                            z" fill="#fff"></path>
+                    </svg>
+
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='72'%20height='54'%20fill='none'%3e%3cpath%20d='M101.641%2028.924l-21.01-22.74a5.309%205.309%200%2000-2.025-1.338%206.35%206.35%200%2000-2.549-.397%206.088%206.088%200%2000-2.46.64c-.741.377-1.354.9-1.784%201.522l-9.109%2013.164c-.447.646-1.091%201.185-1.87%201.565a6.14%206.14%200%2001-2.578.602%206.296%206.296%200%2001-2.618-.515c-.807-.353-1.49-.87-1.985-1.5L41.613%204.614c-.503-.638-1.199-1.16-2.02-1.513a6.308%206.308%200%2000-2.66-.497%206.105%206.105%200%2000-2.597.65c-.78.4-1.416.96-1.845%201.626L1.332%2051.787'%20stroke='url(%23paint0_linear)'%20stroke-width='2'%20stroke-linecap='round'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear'%20x1='69.96'%20y1='-7.211'%20x2='28.273'%20y2='65.656'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%231C90FF'/%3e%3cstop%20offset='.568'%20stop-color='%2367C5FF'/%3e%3cstop%20offset='1'%20stop-color='%2367C5FF'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="" class="absolute top-36 right-1 scale-110  card">
+                    <div class="z-20 absolute top-0 ">
+                        <p class="z-20 text-2xl font-extrabold pb-5 pt-5 pl-4 text-lightblack">Subscriptions</p>
+                        <p class="z-20 leading-6 pl-4 opacity-60 pb-7 w-[90%]">Subscription plans with automated
+                            recurring transactions on various payment modes.</p>
+                        <a class="mt-8 text-skyblue font-bold pl-4 pb-4">Know More <i
+                                class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                    </div>
+                </dix>
+
+                <dix class="relative  h-auto group mycard">
+                    <div class="absolute rounded-full bg-skyblue p-2 right-0 mt-4 cardc">
+                        <img src="https://razorpay.com/build/browser/static/route.e2acb75d.svg" alt=""
+                            class="scale-150">
+                    </div>
+                    <svg viewBox="0 0 338.6625061035156 225" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none" class="css-lqelpq relative stroke-gray-200 max-h-[200px]  w-[100%]">
+                        <path d="m 0 6 
+                            a 6 6 0 0 1 6 -6 
+                            h 239.66250610351562 
+                            a 16 16 0 0 1 11 5 
+                            l 77 77 
+                            a 16 16 0 0 1 5 11 
+                            v 126 
+                            a 6 6 0 0 1 -6 6 
+                            h -326.6625061035156 
+                            a 6 6 0 0 1 -6 -6 
+                            z" fill="#fff"></path>
+                    </svg>
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='72'%20height='54'%20fill='none'%3e%3cpath%20d='M101.641%2028.924l-21.01-22.74a5.309%205.309%200%2000-2.025-1.338%206.35%206.35%200%2000-2.549-.397%206.088%206.088%200%2000-2.46.64c-.741.377-1.354.9-1.784%201.522l-9.109%2013.164c-.447.646-1.091%201.185-1.87%201.565a6.14%206.14%200%2001-2.578.602%206.296%206.296%200%2001-2.618-.515c-.807-.353-1.49-.87-1.985-1.5L41.613%204.614c-.503-.638-1.199-1.16-2.02-1.513a6.308%206.308%200%2000-2.66-.497%206.105%206.105%200%2000-2.597.65c-.78.4-1.416.96-1.845%201.626L1.332%2051.787'%20stroke='url(%23paint0_linear)'%20stroke-width='2'%20stroke-linecap='round'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear'%20x1='69.96'%20y1='-7.211'%20x2='28.273'%20y2='65.656'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%231C90FF'/%3e%3cstop%20offset='.568'%20stop-color='%2367C5FF'/%3e%3cstop%20offset='1'%20stop-color='%2367C5FF'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt=""
+                        class="absolute top-36 right-1 scale-110 hidden group-hover:block">
+                    <div class="z-20 absolute top-0 ">
+                        <p class="z-20 text-2xl font-extrabold pb-5 pt-5 pl-4 text-lightblack">Route</p>
+                        <p class="z-20 leading-6 pl-4 opacity-60 pb-7 w-[85%]">
+                            Split incoming payments automatically to vendor’s accounts, manage marketplace money flow...
+                        </p>
+                        <a class="mt-8 text-skyblue font-bold pl-4 pb-4">Know More <i
+                                class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                    </div>
+                </dix>
+
+                <dix class="relative  h-auto group mycard">
+
+                    <div class="absolute rounded-full bg-skyblue p-2 right-0 mt-5  cardc ">
+                        <img src="https://razorpay.com/build/browser/static/smart-collect.8fc3d60e.svg" alt=""
+                            class="scale-150">
+                    </div>
+                    <svg viewBox="0 0 338.6625061035156 225" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none" class="css-lqelpq relative stroke-gray-200 max-h-[240px]  w-[100%]">
+                        <path d="m 0 6 
+                            a 6 6 0 0 1 6 -6 
+                            h 239.66250610351562 
+                            a 16 16 0 0 1 11 5 
+                            l 77 77 
+                            a 16 16 0 0 1 5 11 
+                            v 126 
+                            a 6 6 0 0 1 -6 6 
+                            h -326.6625061035156 
+                            a 6 6 0 0 1 -6 -6 
+                            z" fill="#fff"></path>
+                    </svg>
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='72'%20height='54'%20fill='none'%3e%3cpath%20d='M101.641%2028.924l-21.01-22.74a5.309%205.309%200%2000-2.025-1.338%206.35%206.35%200%2000-2.549-.397%206.088%206.088%200%2000-2.46.64c-.741.377-1.354.9-1.784%201.522l-9.109%2013.164c-.447.646-1.091%201.185-1.87%201.565a6.14%206.14%200%2001-2.578.602%206.296%206.296%200%2001-2.618-.515c-.807-.353-1.49-.87-1.985-1.5L41.613%204.614c-.503-.638-1.199-1.16-2.02-1.513a6.308%206.308%200%2000-2.66-.497%206.105%206.105%200%2000-2.597.65c-.78.4-1.416.96-1.845%201.626L1.332%2051.787'%20stroke='url(%23paint0_linear)'%20stroke-width='2'%20stroke-linecap='round'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear'%20x1='69.96'%20y1='-7.211'%20x2='28.273'%20y2='65.656'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%231C90FF'/%3e%3cstop%20offset='.568'%20stop-color='%2367C5FF'/%3e%3cstop%20offset='1'%20stop-color='%2367C5FF'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt=""
+                        class="absolute top-36 right-1 scale-110 hidden  group-hover:block">
+                    <div class="z-20 absolute top-0 w-[98%]">
+                        <p class="z-20 text-2xl font-extrabold pb-5 pt-5 pl-4 text-lightblack">Smart Collect</p>
+                        <p class="z-20 leading-6 pl-4 opacity-60 pb-7 w-[85%]">Automatically reconcile incoming NEFT,
+                            RTGS, IMPS, UPI payments using Customer Identifiers & UPI-IDs</p>
+                        <a class="mt-8 text-skyblue font-bold pl-4 pb-4">Know More <i
+                                class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                    </div>
+                </dix>
+            </div>
+
+            <div class="flex items-center justify-center w-[73%] lg:w-[80%] lg:flex-col  mx-auto mt-6 border-2 border-borcolor p-3 bg_text rounded-lg flex-nowrap">
+                <span class="text-[14px] text-lightblack font-extrabold"> Not sure which product to choose ?
+                    &nbsp;</span><span class="text-[14px] opacity-70">Answer a few questions and we'll help you out
+                    &nbsp;</span><span class="text-skyblue text-[14px] font-bold "> Find me a product <i
+                        class="fa-solid fa-chevron-right ml-2 text-skyblue text-[8.5px] font-black self-center"></i></span>
+            </div>
+        </section>
+
+
+        <section
+            class="w-full h-auto mt-10 bg-[url(./images/feature-section-2BG.svg)] pt-48  bg-no-repeat bg-cover pb-[530px] bg-[-525px] relative md:pb-[350px]">
+
+            <img src="/assets/x-flame-1-WivqXk_e.png" alt="" class="absolute scale-50 top-[6.3rem] z-10 md:hidden">
+            <img src="/assets/x-flame-2-Zbr9ebFq.png" alt="" class="absolute  top-[28.5rem] right-6 md:hidden">
+
+            <div class="flex flex-col items-center pb-16 ">
+                <p class="mt-5 text-white font-extrabold text-2xl mx-auto lg:px-5 text-center">Accept Payments with Razorpay Payment Suite
+                </p>
+                <div class=" bg-limegreen  p-[0.1rem] w-6 mt-4 mx-auto"></div>
+            </div>
+
+            <div
+                class="flex w-[73%] h-auto mx-auto border bg-[#181C2E] border-[#525a76] text-white flex-col rounded bg-[url(./images/buisness-banking.png)] bg-[length:53%] bg-no-repeat  bg-right relative z-20 xll:bg-none">
+                <p class="text-white text-[29px] font-bold w-[53%] leading-[46px] pt-8 pl-12 pb-8 z-1 xll:w-[90%]">Manage your
+                    company’s finances and supercharge your business banking with &nbsp;&nbsp;<span class=""><img
+                            src="https://razorpay.com/build/browser/static/razorpay-x-logo.5cf8015e.svg" alt=""
+                            class="inline-block scale-125"></span></p>
+
+                <ul class="pl-14 flex flex-col justify-center ">
+                    <li
+                        class=" text-[16.5px] leading-[30px] before:content-[url(./images/c24.png)] opacity-85 flex gap-4 ">
+                        Open a fully digital current account</li>
+                    <li
+                        class=" text-[16.5px] leading-[30px] before:content-[url(./images/c24.png)] opacity-85 flex gap-4 ">
+                        Automate payables & compliment payments</li>
+                    <li
+                        class="text-[16.5px] leading-[30px] before:content-[url(./images/c24.png)] opacity-85 flex gap-4 ">
+                        Simplify and track spends with Corporate cards</li>
+
+                    <li
+                        class="text-[16.5px] leading-[30px] before:content-[url(./images/c24.png)] opacity-85 flex gap-4 ">
+                        View financial insights at a glance</li>
+
+                </ul>
+
+                <div class="flex items-center gap-6 ml-12 relative pb-12 smax:flex-col smax:items-start">
+                    <button
+                        class="pl-4  pr-[77px] py-3 bg-skyblue text-slate-50 font-bold mt-8 rounded-md relative">Sign Up
+                        &nbsp;</button>
+                    <div
+                        class="py-5 px-4 bg-limegreen absolute top-7 left-24 skew-x-12 flex items-center justify-between">
+                        <i class="fa-solid fa-arrow-right fa -skew-x-12"></i>
+                    </div>
+                    <a class="mt-8 text-skyblue font-bold smax:mt-3">Know More <i
+                            class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+
+                </div>
+            </div>
+
+            <div class="grid w-[73%] mx-auto h-auto col  gap-x-9 mt-20 gap-y-9 grid-cols-[repeat(auto-fit,minmax(322px,1fr))] smax:mx-4">
+                <dix class="relative group  transition duration-700 ease-in-out bg-[#181C2E] text-white mycard2">
+                    <div class="absolute rounded-full bg-skyblue p-2 right-0 mt-4 svgshadow">
+                        <img src="https://razorpay.com/build/browser/static/payment-links.a69f2346.svg" alt=""
+                            class="scale-150">
+                    </div>
+                    <svg viewBox="0 0 338.6625061035156 225" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none" class="css-lqelpq relative  stroke-[#525a76] svgshadow w-[100%] max-h-[240px]">
+                        <path d="m 0 6 
+                       a 6 6 0 0 1 6 -6 
+                       h 239.66250610351562 
+                       a 16 16 0 0 1 11 5 
+                       l 77 77 
+                       a 16 16 0 0 1 5 11 
+                       v 126 
+                       a 6 6 0 0 1 -6 6 
+                       h -326.6625061035156 
+                       a 6 6 0 0 1 -6 -6 
+                       z" fill="#181C2E"></path>
+                    </svg>
+
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='110'%20height='80'%20fill='none'%3e%3cpath%20d='M.928%2066.59l44.206-37.076a8%208%200%200110.336.046l8.508%207.266a8%208%200%200010.239.127l53.075-43.098'%20stroke='url(%23paint0_linear)'%20stroke-width='2'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear'%20x1='68.494'%20y1='-12.219'%20x2='59.726'%20y2='72.663'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%232D7DFF'/%3e%3cstop%20offset='.417'%20stop-color='%235434FF'/%3e%3cstop%20offset='1'%20stop-color='%235434FF'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="" class="absolute top-36 right-1 scale-105 card">
+                    <div class=" absolute top-0 ">
+                        <p class=" text-2xl font-extrabold pb-5 pt-5 pl-4 text-white  ">Payment Links</p>
+                        <p class=" leading-6 pl-4 opacity-60 pb-7 w-[90%] text-white">Share payment link via an email,
+                            SMS, messenger, chatbot etc. and get paid immediately</p>
+                        <a class="mt-8 text-skyblue font-bold pl-4">Know More <i
+                                class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                    </div>
+                </dix>
+
+                <dix class="relative  h-auto group mycard2 bg-[#181C2E] text-white">
+                    <div class="absolute rounded-full bg-skyblue p-2 right-0 mt-4 ">
+                        <img src="https://razorpay.com/build/browser/static/route.e2acb75d.svg" alt=""
+                            class="scale-150">
+                    </div>
+                    <svg viewBox="0 0 338.6625061035156 225" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none" class="css-lqelpq relative stroke-[#525a76] svgshadow w-[100%] max-h-[240px]">
+                        <path d="m 0 6 
+                       a 6 6 0 0 1 6 -6 
+                       h 239.66250610351562 
+                       a 16 16 0 0 1 11 5 
+                       l 77 77 
+                       a 16 16 0 0 1 5 11 
+                       v 126 
+                       a 6 6 0 0 1 -6 6
+                       h -326.6625061035156 
+                       a 6 6 0 0 1 -6 -6 
+                       z" fill="#181C2E"></path>
+                    </svg>
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='110'%20height='80'%20fill='none'%3e%3cpath%20d='M.928%2066.59l44.206-37.076a8%208%200%200110.336.046l8.508%207.266a8%208%200%200010.239.127l53.075-43.098'%20stroke='url(%23paint0_linear)'%20stroke-width='2'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear'%20x1='68.494'%20y1='-12.219'%20x2='59.726'%20y2='72.663'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%232D7DFF'/%3e%3cstop%20offset='.417'%20stop-color='%235434FF'/%3e%3cstop%20offset='1'%20stop-color='%235434FF'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="" class="absolute top-36 right-1 scale-105 card">
+                    <div class="z-20 absolute top-0 ">
+                        <p class="z-20 text-2xl font-extrabold pb-5 pt-5 pl-4 text-white">Route</p>
+                        <p class="z-20 leading-6 pl-4 opacity-60 pb-7 w-[85%] text-white">
+                            Split incoming payments automatically to vendor’s accounts, manage marketplace money flow...
+                        </p>
+                        <a class="mt-8 text-skyblue font-bold pl-4 pb-4">Know More <i
+                                class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                    </div>
+                </dix>
+
+                <dix class="relative  h-auto group  bg-[#181C2E] mycard2">
+
+                    <div class="absolute rounded-full bg-skyblue p-2 right-0 mt-5 ">
+                        <img src="https://razorpay.com/build/browser/static/smart-collect.8fc3d60e.svg" alt=""
+                            class="scale-150">
+                    </div>
+                    <svg viewBox="0 0 338.6625061035156 225" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none" class="css-lqelpq relative stroke-[#525a76]  svgshadow w-[100%] max-h-[240px]">
+                        <path d="m 0 6 
+                       a 6 6 0 0 1 6 -6 
+                       h 239.66250610351562 
+                       a 16 16 0 0 1 11 5 
+                       l 77 77 
+                       a 16 16 0 0 1 5 11 
+                       v 126 
+                       a 6 6 0 0 1 -6 6 
+                       h -326.6625061035156 
+                       a 6 6 0 0 1 -6 -6 
+                       z" fill="#181C2E"></path>
+                    </svg>
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='110'%20height='80'%20fill='none'%3e%3cpath%20d='M.928%2066.59l44.206-37.076a8%208%200%200110.336.046l8.508%207.266a8%208%200%200010.239.127l53.075-43.098'%20stroke='url(%23paint0_linear)'%20stroke-width='2'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear'%20x1='68.494'%20y1='-12.219'%20x2='59.726'%20y2='72.663'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%232D7DFF'/%3e%3cstop%20offset='.417'%20stop-color='%235434FF'/%3e%3cstop%20offset='1'%20stop-color='%235434FF'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="" class="absolute top-36 right-1 scale-105 card">
+                    <div class="z-20 absolute top-0 w-[98%]">
+                        <p class="z-20 text-2xl font-extrabold pb-5 pt-5 pl-4 text-white">Smart Collect</p>
+                        <p class="z-20 leading-6 pl-4 opacity-60 pb-7 w-[85%] text-white">Automatically reconcile
+                            incoming NEFT, RTGS, IMPS, UPI payments using Customer Identifiers & UPI-IDs</p>
+                        <a class="mt-8 text-skyblue font-bold pl-4 pb-4">Know More <i
+                                class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                    </div>
+                </dix>
+            </div>
+
+            <div
+                class="flex items-center justify-center text-white relative  w-[73%] mx-auto mt-12  p-6 border border-[#525a76] rounded-md gap-10 flex-wrap">
+                <p class="text-[19.5px]">Check out the live demo to learn how RazorpayX works. <span
+                        class="text-xl font-bold">No sign-up required!</span></p>
+                <button class="pl-6  pr-[77px] py-3 bg-skyblue text-slate-50 font-bold  rounded-md relative smaxx:pr-[60px]">
+                    Check out the demo &nbsp;
+                    <div
+                        class="py-[7.5%] px-4 bg-limegreen absolute -top-1 left-48 skew-x-12 flex items-center justify-betwe smaxx:hidden">
+                        <i class="fa-solid fa-arrow-right fa -skew-x-12"></i>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <section class="w-[100%]  pb-5 relative top-[-80px] ">
+
+            <img src="https://razorpay.com/build/browser/static/dots-with-cut.bde9e78f.png" alt=""
+                class=" absolute top-[-100px] left-[500px]  z-10 lg:hidden">
+            <img src="https://razorpay.com/build/browser/static/dots-with-cut.bde9e78f.png" alt=""
+                class="absolute top-[-100px] right-[133px] lg:hidden">
+
+            <div class="mx-auto h-auto w-[75.3%] grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] grid-rows-2 gap-x-5 gap-y-9 relative z-30 ">
+                <div class="text-[2.5rem] font-extrabold leading-[3rem]  flex justify-center  flex-col">
+                    <p class="text-[#02042a]">New in the</p>
+                    <p class="text-skyblue">Razorpay</p>
+                    <p class="text-[#02042a]">Product Suite</p>
+                </div>
+
+                <div
+                    class=" class-4 hover:scale-105 p-10  transition-all duration-150 relative group overflow-hidden z-30 bg-white ">
+
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='318'%20height='305'%20fill='none'%3e%3cmask%20id='a'%20maskUnits='userSpaceOnUse'%20x='0'%20y='0'%20width='318'%20height='305'%3e%3crect%20opacity='.5'%20width='318'%20height='305'%20rx='6'%20fill='%23fff'/%3e%3c/mask%3e%3cg%20mask='url(%23a)'%20stroke='%23C4DDF9'%3e%3cpath%20d='M-35.41%2031.05h0a5.43%205.43%200%2001-.9-9.26h.01L93.21-80.28h0c4.6-3.64%2010.93%201.47%208.38%206.71h0L59.33%2014.27l-.21.45.45.22%205.43%202.58h0l28.51%2013.73h0l36.8%2017.7h.01a5.5%205.5%200%20011.02%209.27h0L1.77%20160.27h0c-4.6%203.64-10.93-1.47-8.37-6.71h0l42.24-87.83.22-.45-.46-.22-5.43-2.58h0L-.7%2047.71h0l-34.72-16.66z'/%3e%3cpath%20d='M74.26-22.6v-.01a3.1%203.1%200%2001-.5-5.28h0l78.64-61.9h0c2.63-2.09%206.24.84%204.78%203.82h0l-25.65%2053.28-.22.45.46.22%203.3%201.56h0l17.3%208.33h0l22.35%2010.74h0c2.08.98%202.41%203.87.59%205.28h0L96.63%2055.8h0c-2.63%202.09-6.24-.84-4.78-3.82h0L117.5-1.32l.21-.45-.45-.22-3.3-1.56h0L95.34-12.5h0L74.26-22.6zM234.75%20281.71h0a2.15%202.15%200%2001-.36-3.7h.01L293.56%20232h0c1.9-1.49%204.44.62%203.42%202.68h0l-19.3%2039.6-.22.46.46.21%202.48%201.16h0l13.02%206.2h0l16.82%207.98h0c1.48.69%201.7%202.71.41%203.7h0L251.45%20340h0c-1.9%201.49-4.43-.62-3.4-2.68h0l19.29-39.6.22-.46-.46-.21-2.48-1.16h0l-14-6.66h-.01l-15.86-7.52z'/%3e%3c/g%3e%3c/svg%3e" alt=""
+                        class="absolute top-0 left-0  opacity-100 group-hover:opacity-0 object-contain">
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='318'%20height='305'%20fill='none'%3e%3cmask%20id='a'%20maskUnits='userSpaceOnUse'%20x='0'%20y='0'%20width='318'%20height='305'%3e%3crect%20width='318'%20height='305'%20rx='6'%20fill='%23fff'/%3e%3c/mask%3e%3cg%20mask='url(%23a)'%20fill='%23C4DDF9'%20fill-opacity='.4'%3e%3cpath%20opacity='.4'%20d='M-35.63%2031.5L-.92%2048.16l30.67%2014.77%205.44%202.58-42.24%2087.83c-2.8%205.72%204.11%2011.3%209.13%207.32L131.66%2058.6a6%206%200%2000-1.12-10.1L93.74%2030.8l-28.5-13.73-5.45-2.58%2042.24-87.83c2.8-5.72-4.1-11.3-9.13-7.32L-36.6%2021.4a5.93%205.93%200%2000.97%2010.1z'/%3e%3cpath%20opacity='.4'%20d='M74.05-22.16l21.07%2010.1%2018.62%208.97%203.3%201.56L91.4%2051.75c-1.7%203.46%202.5%206.85%205.54%204.44l78.68-61.9a3.64%203.64%200%2000-.68-6.13l-22.35-10.74-17.3-8.33-3.3-1.56%2025.64-53.28c1.7-3.46-2.5-6.85-5.54-4.44l-78.64%2061.9a3.6%203.6%200%2000.6%206.13zM234.54%20282.17l15.86%207.5%2014%206.67%202.49%201.16-19.3%2039.6c-1.27%202.57%201.88%205.09%204.17%203.3l59.2-46.01a2.69%202.69%200%2000-.51-4.56l-16.81-7.98-13.03-6.19-2.48-1.16%2019.3-39.6c1.27-2.57-1.88-5.09-4.17-3.3l-59.17%2046.01a2.66%202.66%200%2000.45%204.56z'/%3e%3c/g%3e%3c/svg%3e" alt=""
+                        class="absolute top-0 left-0 opacity-0 group-hover:opacity-100 object-contain">
+                    <div class=" p-1 bg-[#3987f0] inline-block rounded-full z-20 relative">
+                        <img src="https://razorpay.com/build/browser/static/instant-settlements.b6b6e467.svg" alt=""
+                            class="scale-1">
+                    </div>
+                    <p class="text-[1.13rem] font-extrabold text-[#02042a] pb-3 pt-2">Instant Settlements</p>
+                    <p class="leading-6 opacity-60 pb-3">Settle your customer payments within 10 seconds as soon your
+                        account is activated, even during holidays.</p>
+                    <span class="mb-5">
+                        <a class=" text-skyblue font-bold">Know More <i
+                                class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                    </span>
+                </div>
+
+
+                <div
+                    class=" shadow-md hover:scale-105 p-10 overflow-hidden transition-all duration-150 group relative z-30 bg-white object-fill">
+
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='222'%20height='115'%20fill='none'%3e%3cpath%20opacity='.5'%20d='M111.4%2033.4L94.9%2051.7%2057.3%2093.6%201%2068.7V1h91.6l18.8%2032.4z'%20stroke='%23C4DDF9'/%3e%3cpath%20opacity='.5'%20d='M220.7%201l-68.4%2076.2-39.2-17.4-18.2-8.1-77.2-34.2L19.4%201h201.3z'%20stroke='%23C4DDF9'/%3e%3cpath%20opacity='.5'%20d='M138.3%2016.6l-25.2%2043.2L81.6%20114%201%2096.6V1h123.3l14%2015.6z'%20stroke='%23C4DDF9'/%3e%3c/svg%3e" alt=""
+                        class="absolute top-0 left-0  opacity-100 group-hover:opacity-0 overflow-hidden  object-fill">
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%20id='Layer_1'%20x='0'%20y='0'%20viewBox='0%200%20318%20305'%20xml:space='preserve'%3e%3cstyle%3e.st5{fill:%23C4DDF9}%3c/style%3e%3cg%20opacity='.5'%3e%3cpath%20opacity='.2'%20fill='%23C4DDF9'%20d='M111.5%2033.9L94.6%2052.8%2056.9%2094.7-.3%2069.3V0h92.2z'/%3e%3cpath%20d='M222.2%200L152%2078.3l-39.2-17.4-18.2-8.1-77.9-34.5L18.6%200zm95.9%20264.7V305h-129l1.3-13%20105.2-22.5%203.2-.7%203.2-.7%203.9-.8%203.9-.8%201.7-.4%206.6-1.4z'%20fill='%23C4DDF9'%20opacity='.1'/%3e%3cpath%20opacity='.15'%20fill='%23C4DDF9'%20d='M138.4%2017l-25.6%2043.9-31.5%2054.2L-.3%2097.4V0h123.5z'/%3e%3cg%20opacity='.32'%3e%3ccircle%20class='st5'%20cx='311'%20cy='228'%20r='2'/%3e%3ccircle%20class='st5'%20cx='311'%20cy='238'%20r='2'/%3e%3ccircle%20class='st5'%20cx='311'%20cy='248'%20r='2'/%3e%3ccircle%20class='st5'%20cx='311'%20cy='258'%20r='2'/%3e%3ccircle%20class='st5'%20cx='311'%20cy='268'%20r='2'/%3e%3ccircle%20class='st5'%20cx='311'%20cy='278'%20r='2'/%3e%3ccircle%20class='st5'%20cx='311'%20cy='288'%20r='2'/%3e%3ccircle%20class='st5'%20cx='311'%20cy='298'%20r='2'/%3e%3ccircle%20class='st5'%20cx='304'%20cy='228'%20r='2'/%3e%3ccircle%20class='st5'%20cx='304'%20cy='238'%20r='2'/%3e%3ccircle%20class='st5'%20cx='304'%20cy='248'%20r='2'/%3e%3ccircle%20class='st5'%20cx='304'%20cy='258'%20r='2'/%3e%3ccircle%20class='st5'%20cx='304'%20cy='268'%20r='2'/%3e%3ccircle%20class='st5'%20cx='304'%20cy='278'%20r='2'/%3e%3ccircle%20class='st5'%20cx='304'%20cy='288'%20r='2'/%3e%3ccircle%20class='st5'%20cx='304'%20cy='298'%20r='2'/%3e%3ccircle%20class='st5'%20cx='297'%20cy='238'%20r='2'/%3e%3ccircle%20class='st5'%20cx='297'%20cy='248'%20r='2'/%3e%3ccircle%20class='st5'%20cx='297'%20cy='258'%20r='2'/%3e%3ccircle%20class='st5'%20cx='297'%20cy='268'%20r='2'/%3e%3ccircle%20class='st5'%20cx='297'%20cy='278'%20r='2'/%3e%3ccircle%20class='st5'%20cx='297'%20cy='288'%20r='2'/%3e%3ccircle%20class='st5'%20cx='297'%20cy='298'%20r='2'/%3e%3ccircle%20class='st5'%20cx='290'%20cy='248'%20r='2'/%3e%3ccircle%20class='st5'%20cx='290'%20cy='258'%20r='2'/%3e%3ccircle%20class='st5'%20cx='290'%20cy='268'%20r='2'/%3e%3ccircle%20class='st5'%20cx='290'%20cy='278'%20r='2'/%3e%3ccircle%20class='st5'%20cx='290'%20cy='288'%20r='2'/%3e%3ccircle%20class='st5'%20cx='290'%20cy='298'%20r='2'/%3e%3ccircle%20class='st5'%20cx='283'%20cy='258'%20r='2'/%3e%3ccircle%20class='st5'%20cx='283'%20cy='268'%20r='2'/%3e%3ccircle%20class='st5'%20cx='283'%20cy='278'%20r='2'/%3e%3ccircle%20class='st5'%20cx='283'%20cy='288'%20r='2'/%3e%3ccircle%20class='st5'%20cx='283'%20cy='298'%20r='2'/%3e%3ccircle%20class='st5'%20cx='276'%20cy='268'%20r='2'/%3e%3ccircle%20class='st5'%20cx='276'%20cy='278'%20r='2'/%3e%3ccircle%20class='st5'%20cx='276'%20cy='288'%20r='2'/%3e%3ccircle%20class='st5'%20cx='276'%20cy='298'%20r='2'/%3e%3ccircle%20class='st5'%20cx='269'%20cy='278'%20r='2'/%3e%3ccircle%20class='st5'%20cx='269'%20cy='288'%20r='2'/%3e%3ccircle%20class='st5'%20cx='269'%20cy='298'%20r='2'/%3e%3ccircle%20class='st5'%20cx='262'%20cy='288'%20r='2'/%3e%3ccircle%20class='st5'%20cx='262'%20cy='298'%20r='2'/%3e%3ccircle%20class='st5'%20cx='255'%20cy='298'%20r='2'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt=""
+                        class="absolute top-0 left-0 opacity-0 group-hover:opacity-100 overflow-hidden object-fill">
+
+                    <div class=" p-1 bg-[#3987f0] inline-block rounded-full relative">
+                        <img src="https://razorpay.com/build/browser/static/upi-autopay.df1cd0fd.svg" alt="">
+                    </div>
+                    <p class="text-[1.13rem] font-extrabold text-[#02042a] pb-3 pt-2">UPI AutoPay</p>
+                    <p class="leading-6 opacity-60 pb-3">Allow customers to set up recurring payments using UPI
+                        Apps.</p>
+                    <a class="mt-8 text-skyblue font-bold">Know More <i
+                            class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                </div>
+                <div class="p-10 class-4 hover:scale-105 overflow-hidden  transition-all duration-150 group relative ">
+
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='214'%20height='94'%20fill='none'%3e%3cstyle%3epath%20{stroke:%20%23C4DDF9}%3c/style%3e%3cpath%20opacity='.4'%20d='M27.5%2018.5h113c3%200%205.5%202.5%205.5%205.5v59c0%203-2.5%205.5-5.5%205.5h-113c-3%200-5.5-2.5-5.5-5.5V24c0-3%202.5-5.5%205.5-5.5z'/%3e%3cpath%20opacity='.4'%20d='M6.5%201.5h43C52.5%201.5%2055%204%2055%207v81c0%203-2.5%205.5-5.5%205.5h-43C3.5%2093.5%201%2091%201%2088V7c0-3%202.5-5.5%205.5-5.5z'/%3e%3cpath%20opacity='.4'%20d='M213%201v23c0%203-2.5%205.5-5.5%205.5h-38c-3%200-5.5-2.5-5.5-5.5V1h49z'/%3e%3cpath%20opacity='.4'%20d='M190%201v66c0%203-2.5%205.5-5.5%205.5h-136c-3%200-5.5-2.5-5.5-5.5V1h147z'/%3e%3c/svg%3e" alt=""
+                        class="absolute top-0 left-0  opacity-100 group-hover:opacity-0 z-10">
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%20id='Layer_1'%20x='0'%20y='0'%20viewBox='0%200%20318%20305'%20xml:space='preserve'%3e%3cstyle%3e.st1{opacity:.3}.st2{fill:%23C4DDF9}.st4{fill:%23C4DDF9}%3c/style%3e%3cg%20opacity='.3'%3e%3cg%20class='st1'%3e%3cpath%20class='st2'%20d='M38.5%2018h113c3.3%200%206%202.7%206%206v59c0%203.3-2.7%206-6%206h-113c-3.3%200-6-2.7-6-6V24c0-3.3%202.7-6%206-6z'/%3e%3c/g%3e%3cg%20class='st1'%3e%3cpath%20class='st2'%20d='M318.1%20278v26h-65.6v-20c0-3.3%202.7-6%206-6h59.6z'/%3e%3c/g%3e%3cg%20class='st1'%3e%3cpath%20class='st2'%20d='M318.1%20268v36h-35.6v-30c0-3.3%202.7-6%206-6h29.6z'/%3e%3c/g%3e%3cg%20class='st1'%3e%3cpath%20class='st2'%20d='M7%201h52.2c4%200%207.3%202.7%207.3%206v81c0%203.3-3.3%206-7.3%206H7c-4%200-7.3-2.7-7.3-6V7C-.3%203.7%203%201%207%201z'/%3e%3c/g%3e%3cg%20class='st1'%3e%3cpath%20class='st2'%20d='M224.5-1v25c0%203.3-2.7%206-6%206h-38c-3.3%200-6-2.7-6-6V-1h50z'/%3e%3c/g%3e%3cg%20class='st1'%3e%3cpath%20class='st2'%20d='M201.5-1v68c0%203.3-2.7%206-6%206h-136c-3.3%200-6-2.7-6-6V-1h148z'/%3e%3c/g%3e%3cg%20opacity='.32'%3e%3ccircle%20class='st4'%20cx='307.5'%20cy='82'%20r='2'/%3e%3ccircle%20class='st4'%20cx='307.5'%20cy='72'%20r='2'/%3e%3ccircle%20class='st4'%20cx='307.5'%20cy='62'%20r='2'/%3e%3ccircle%20class='st4'%20cx='307.5'%20cy='52'%20r='2'/%3e%3ccircle%20class='st4'%20cx='307.5'%20cy='42'%20r='2'/%3e%3ccircle%20class='st4'%20cx='307.5'%20cy='32'%20r='2'/%3e%3ccircle%20class='st4'%20cx='307.5'%20cy='22'%20r='2'/%3e%3ccircle%20class='st4'%20cx='307.5'%20cy='12'%20r='2'/%3e%3ccircle%20class='st4'%20cx='300.5'%20cy='82'%20r='2'/%3e%3ccircle%20class='st4'%20cx='300.5'%20cy='72'%20r='2'/%3e%3ccircle%20class='st4'%20cx='300.5'%20cy='62'%20r='2'/%3e%3ccircle%20class='st4'%20cx='300.5'%20cy='52'%20r='2'/%3e%3ccircle%20class='st4'%20cx='300.5'%20cy='42'%20r='2'/%3e%3ccircle%20class='st4'%20cx='300.5'%20cy='32'%20r='2'/%3e%3ccircle%20class='st4'%20cx='300.5'%20cy='22'%20r='2'/%3e%3ccircle%20class='st4'%20cx='300.5'%20cy='12'%20r='2'/%3e%3ccircle%20class='st4'%20cx='293.5'%20cy='72'%20r='2'/%3e%3ccircle%20class='st4'%20cx='293.5'%20cy='62'%20r='2'/%3e%3ccircle%20class='st4'%20cx='293.5'%20cy='52'%20r='2'/%3e%3ccircle%20class='st4'%20cx='293.5'%20cy='42'%20r='2'/%3e%3ccircle%20class='st4'%20cx='293.5'%20cy='32'%20r='2'/%3e%3ccircle%20class='st4'%20cx='293.5'%20cy='22'%20r='2'/%3e%3ccircle%20class='st4'%20cx='293.5'%20cy='12'%20r='2'/%3e%3ccircle%20class='st4'%20cx='286.5'%20cy='62'%20r='2'/%3e%3ccircle%20class='st4'%20cx='286.5'%20cy='52'%20r='2'/%3e%3ccircle%20class='st4'%20cx='286.5'%20cy='42'%20r='2'/%3e%3ccircle%20class='st4'%20cx='286.5'%20cy='32'%20r='2'/%3e%3ccircle%20class='st4'%20cx='286.5'%20cy='22'%20r='2'/%3e%3ccircle%20class='st4'%20cx='286.5'%20cy='12'%20r='2'/%3e%3ccircle%20class='st4'%20cx='279.5'%20cy='52'%20r='2'/%3e%3ccircle%20class='st4'%20cx='279.5'%20cy='42'%20r='2'/%3e%3ccircle%20class='st4'%20cx='279.5'%20cy='32'%20r='2'/%3e%3ccircle%20class='st4'%20cx='279.5'%20cy='22'%20r='2'/%3e%3ccircle%20class='st4'%20cx='279.5'%20cy='12'%20r='2'/%3e%3ccircle%20class='st4'%20cx='272.5'%20cy='42'%20r='2'/%3e%3ccircle%20class='st4'%20cx='272.5'%20cy='32'%20r='2'/%3e%3ccircle%20class='st4'%20cx='272.5'%20cy='22'%20r='2'/%3e%3ccircle%20class='st4'%20cx='272.5'%20cy='12'%20r='2'/%3e%3ccircle%20class='st4'%20cx='265.5'%20cy='32'%20r='2'/%3e%3ccircle%20class='st4'%20cx='265.5'%20cy='22'%20r='2'/%3e%3ccircle%20class='st4'%20cx='265.5'%20cy='12'%20r='2'/%3e%3ccircle%20class='st4'%20cx='258.5'%20cy='22'%20r='2'/%3e%3ccircle%20class='st4'%20cx='258.5'%20cy='12'%20r='2'/%3e%3ccircle%20class='st4'%20cx='251.5'%20cy='12'%20r='2'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt=""
+                        class="absolute top-0 left-0 opacity-0 group-hover:opacity-100 z-10">
+
+                    <div class="p-1 bg-[#3987f0] inline-block rounded-full relative z-20">
+                        <img src="https://razorpay.com/build/browser/static/payment-buttons.74fc1e0f.svg" alt=""
+                            class="w-9">
+                    </div>
+                    <p class="text-[1.13rem] font-extrabold text-[#02042a] pb-3 pt-2 relative z-20">Payment Button</p>
+                    <p class="leading-6 opacity-60 pb-3 ">Accept payments on your website, in less than 5
+                        minutes. No developer needed.</p>
+                    <a class="mt-8 text-skyblue font-bold">Know More <i
+                            class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                </div>
+                <div class="p-10 class-4 hover:scale-105 overflow-hidden transition-all duration-150 group relative">
+
+
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='201'%20height='85'%20fill='none'%3e%3cpath%20opacity='.5'%20d='M190.8-.5l-3.1%207.8-30%2074.6-47.9-20L.5%2016.4V-.5h190.3z'%20stroke='%23C4DDF9'/%3e%3cpath%20opacity='.5'%20d='M198.8-.5l-11.1%207.8-77.9%2054.6L79%2083.5.5%2028.7V2.5l67.6-3h130.7z'%20stroke='%23C4DDF9'/%3e%3c/svg%3e" alt=""
+                        class="absolute top-0 left-0  opacity-100 group-hover:opacity-0 z-10">
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%20id='Layer_1'%20x='0'%20y='0'%20viewBox='0%200%20318%20305'%20xml:space='preserve'%3e%3cstyle%3e.st0{opacity:.1;enable-background:new}.st0,.st2{fill:%23C4DDF9}.st3{opacity:.1;fill:%23C4DDF9;enable-background:new}%3c/style%3e%3cpath%20class='st0'%20d='M45.8-.5H.5v15.9l109.3%2045.5%2047.9%2020%2030-74.6%202.7-6.8z'/%3e%3cpath%20class='st0'%20d='M190.4-.5h6.9l-9.6%206.8-77.9%2054.6L79%2082.5.5%2027.7V1.5l45.3-2z'/%3e%3cg%20opacity='.2'%3e%3ccircle%20class='st2'%20cx='2'%20cy='230'%20r='2'/%3e%3ccircle%20class='st2'%20cx='2'%20cy='240'%20r='2'/%3e%3ccircle%20class='st2'%20cx='2'%20cy='250'%20r='2'/%3e%3ccircle%20class='st2'%20cx='2'%20cy='260'%20r='2'/%3e%3ccircle%20class='st2'%20cx='2'%20cy='270'%20r='2'/%3e%3ccircle%20class='st2'%20cx='2'%20cy='280'%20r='2'/%3e%3ccircle%20class='st2'%20cx='2'%20cy='290'%20r='2'/%3e%3ccircle%20class='st2'%20cx='2'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='9'%20cy='230'%20r='2'/%3e%3ccircle%20class='st2'%20cx='9'%20cy='240'%20r='2'/%3e%3ccircle%20class='st2'%20cx='9'%20cy='250'%20r='2'/%3e%3ccircle%20class='st2'%20cx='9'%20cy='260'%20r='2'/%3e%3ccircle%20class='st2'%20cx='9'%20cy='270'%20r='2'/%3e%3ccircle%20class='st2'%20cx='9'%20cy='280'%20r='2'/%3e%3ccircle%20class='st2'%20cx='9'%20cy='290'%20r='2'/%3e%3ccircle%20class='st2'%20cx='9'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='16'%20cy='240'%20r='2'/%3e%3ccircle%20class='st2'%20cx='16'%20cy='250'%20r='2'/%3e%3ccircle%20class='st2'%20cx='16'%20cy='260'%20r='2'/%3e%3ccircle%20class='st2'%20cx='16'%20cy='270'%20r='2'/%3e%3ccircle%20class='st2'%20cx='16'%20cy='280'%20r='2'/%3e%3ccircle%20class='st2'%20cx='16'%20cy='290'%20r='2'/%3e%3ccircle%20class='st2'%20cx='16'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='23'%20cy='240'%20r='2'/%3e%3ccircle%20class='st2'%20cx='23'%20cy='250'%20r='2'/%3e%3ccircle%20class='st2'%20cx='23'%20cy='260'%20r='2'/%3e%3ccircle%20class='st2'%20cx='23'%20cy='270'%20r='2'/%3e%3ccircle%20class='st2'%20cx='23'%20cy='280'%20r='2'/%3e%3ccircle%20class='st2'%20cx='23'%20cy='290'%20r='2'/%3e%3ccircle%20class='st2'%20cx='23'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='30'%20cy='250'%20r='2'/%3e%3ccircle%20class='st2'%20cx='30'%20cy='260'%20r='2'/%3e%3ccircle%20class='st2'%20cx='30'%20cy='270'%20r='2'/%3e%3ccircle%20class='st2'%20cx='30'%20cy='280'%20r='2'/%3e%3ccircle%20class='st2'%20cx='30'%20cy='290'%20r='2'/%3e%3ccircle%20class='st2'%20cx='30'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='37'%20cy='250'%20r='2'/%3e%3ccircle%20class='st2'%20cx='37'%20cy='260'%20r='2'/%3e%3ccircle%20class='st2'%20cx='37'%20cy='270'%20r='2'/%3e%3ccircle%20class='st2'%20cx='37'%20cy='280'%20r='2'/%3e%3ccircle%20class='st2'%20cx='37'%20cy='290'%20r='2'/%3e%3ccircle%20class='st2'%20cx='37'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='44'%20cy='260'%20r='2'/%3e%3ccircle%20class='st2'%20cx='44'%20cy='270'%20r='2'/%3e%3ccircle%20class='st2'%20cx='44'%20cy='280'%20r='2'/%3e%3ccircle%20class='st2'%20cx='44'%20cy='290'%20r='2'/%3e%3ccircle%20class='st2'%20cx='44'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='51'%20cy='260'%20r='2'/%3e%3ccircle%20class='st2'%20cx='51'%20cy='270'%20r='2'/%3e%3ccircle%20class='st2'%20cx='51'%20cy='280'%20r='2'/%3e%3ccircle%20class='st2'%20cx='51'%20cy='290'%20r='2'/%3e%3ccircle%20class='st2'%20cx='51'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='58'%20cy='270'%20r='2'/%3e%3ccircle%20class='st2'%20cx='58'%20cy='280'%20r='2'/%3e%3ccircle%20class='st2'%20cx='58'%20cy='290'%20r='2'/%3e%3ccircle%20class='st2'%20cx='58'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='65'%20cy='270'%20r='2'/%3e%3ccircle%20class='st2'%20cx='65'%20cy='280'%20r='2'/%3e%3ccircle%20class='st2'%20cx='65'%20cy='290'%20r='2'/%3e%3ccircle%20class='st2'%20cx='65'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='72'%20cy='280'%20r='2'/%3e%3ccircle%20class='st2'%20cx='72'%20cy='290'%20r='2'/%3e%3ccircle%20class='st2'%20cx='72'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='79'%20cy='280'%20r='2'/%3e%3ccircle%20class='st2'%20cx='79'%20cy='290'%20r='2'/%3e%3ccircle%20class='st2'%20cx='79'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='86'%20cy='290'%20r='2'/%3e%3ccircle%20class='st2'%20cx='86'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='93'%20cy='300'%20r='2'/%3e%3ccircle%20class='st2'%20cx='100'%20cy='300'%20r='2'/%3e%3c/g%3e%3cpath%20class='st3'%20d='M317.5%20258.3v46.2h-49l-1.9-6.9-6.6-24.7z'/%3e%3cpath%20class='st3'%20d='M317.5%20279.1v25.4H250l-.2-.7%2016.8-6.2z'/%3e%3c/svg%3e" alt=""
+                        class="absolute top-0 left-0 opacity-0 group-hover:opacity-100 z-10">
+
+
+                    <img src="https://razorpay.com/build/browser/static/qr-mc-code.aec73db1.svg" alt=""
+                        class="w-10 relative z-20">
+                    <p class="text-[1.13rem] font-extrabold text-[#02042a] pb-3 pt-2 relative z-20">QR Codes</p>
+                    <p class="leading-6 opacity-60 pb-3 ">Create unlimited QR codes with business branding and
+                        start accepting payments for free*.</p>
+                    <a class="mt-8 text-skyblue font-bold">Know More <i
+                            class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                </div>
+                <div class="p-10 class-4 hover:scale-105 overflow-clip transition-all duration-150 relative group">
+
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='237'%20height='88'%20fill='none'%3e%3cpath%20d='M1%2079.5v3.3c1.3.4%202.5.8%203.7%201.2%2021.1%206.2%2037.9%201%2051.3-11.2%201.2-1.1%202.4-2.3%203.6-3.5C74.7%2053.3%2084.9%2028.1%2091.5%201'%20stroke-opacity='0.5'%20stroke='%23C4DDF9'/%3e%3cpath%20d='M1%2079.5c20.5-12.2%2039.8-13.1%2058.6-10.2%2010.2%201.5%2020.3%204.1%2030.4%206.6C134.1%2086.7%20178.5%2095.2%20235.2%201H91.5'%20stroke-opacity='0.5'%20stroke='%23C4DDF9'/%3e%3cpath%20d='M91.5%201h108.4C169%2076.8%20129.8%2079.5%2090%2075.8c-11.3-1-22.7-2.6-34-3.1-17.7-.8-35%20.9-51.3%2011.2-1.2.8-2.5%201.7-3.7%202.6v-7'%20stroke-opacity='0.5'%20stroke='%23C4DDF9'/%3e%3c/svg%3e" alt=""
+                        class="absolute top-0 left-0  opacity-100 group-hover:opacity-0 z-10">
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%20id='Layer_1'%20x='0'%20y='0'%20viewBox='0%200%20318%20305'%20xml:space='preserve'%3e%3cstyle%3e.st1{opacity:.1;fill:%23C4DDF9;enable-background:new}.st2{opacity:.2;fill:%23C4DDF9}%3c/style%3e%3cpath%20d='M-.6%2079.2V.4h91.1c-6.6%2027.2-16.8%2052.3-31.9%2068.2-1.2%201.2-2.3%202.4-3.6%203.5C41.7%2084.3%2024.8%2089.5%203.7%2083.3c-1.4-.4-2.9-.9-4.3-1.4v-2.7z'%20opacity='.1'%20fill='%23C4DDF9'/%3e%3cpath%20class='st1'%20d='M198.9.4H-.6v78.8c20.8-12.5%2040.2-13.4%2059.2-10.6%2010.2%201.5%2020.3%204.1%2030.4%206.6%2040.2%209.9%2080.8%2017.8%20130.8-52.7.8-1.1%201.5-2.2%202.3-3.3%201.5-2.2%203.1-4.5%204.6-6.8l2.1-3.3c1.8-2.8%203.6-5.7%205.4-8.7h-35.3z'/%3e%3cpath%20class='st1'%20d='M-.6%2081.9v4.4c1.4-1.1%202.9-2%204.3-3C20%2073.1%2037.4%2071.3%2055%2072.1c11.3.5%2022.6%202.1%2034%203.1%2039.8%203.7%2078.9%201%20109.8-74.8H-.6v81.5zm318%20214.8v8.7H126.1c71.2-58.1%20124.6%2020.7%20191.3-8.7z'/%3e%3ccircle%20class='st2'%20cx='305'%20cy='81'%20r='2'/%3e%3ccircle%20class='st2'%20cx='305'%20cy='71'%20r='2'/%3e%3ccircle%20class='st2'%20cx='305'%20cy='61'%20r='2'/%3e%3ccircle%20class='st2'%20cx='305'%20cy='51'%20r='2'/%3e%3ccircle%20class='st2'%20cx='305'%20cy='41'%20r='2'/%3e%3ccircle%20class='st2'%20cx='305'%20cy='31'%20r='2'/%3e%3ccircle%20class='st2'%20cx='305'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='305'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='298'%20cy='81'%20r='2'/%3e%3ccircle%20class='st2'%20cx='298'%20cy='71'%20r='2'/%3e%3ccircle%20class='st2'%20cx='298'%20cy='61'%20r='2'/%3e%3ccircle%20class='st2'%20cx='298'%20cy='51'%20r='2'/%3e%3ccircle%20class='st2'%20cx='298'%20cy='41'%20r='2'/%3e%3ccircle%20class='st2'%20cx='298'%20cy='31'%20r='2'/%3e%3ccircle%20class='st2'%20cx='298'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='298'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='291'%20cy='71'%20r='2'/%3e%3ccircle%20class='st2'%20cx='291'%20cy='61'%20r='2'/%3e%3ccircle%20class='st2'%20cx='291'%20cy='51'%20r='2'/%3e%3ccircle%20class='st2'%20cx='291'%20cy='41'%20r='2'/%3e%3ccircle%20class='st2'%20cx='291'%20cy='31'%20r='2'/%3e%3ccircle%20class='st2'%20cx='291'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='291'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='284'%20cy='71'%20r='2'/%3e%3ccircle%20class='st2'%20cx='284'%20cy='61'%20r='2'/%3e%3ccircle%20class='st2'%20cx='284'%20cy='51'%20r='2'/%3e%3ccircle%20class='st2'%20cx='284'%20cy='41'%20r='2'/%3e%3ccircle%20class='st2'%20cx='284'%20cy='31'%20r='2'/%3e%3ccircle%20class='st2'%20cx='284'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='284'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='277'%20cy='61'%20r='2'/%3e%3ccircle%20class='st2'%20cx='277'%20cy='51'%20r='2'/%3e%3ccircle%20class='st2'%20cx='277'%20cy='41'%20r='2'/%3e%3ccircle%20class='st2'%20cx='277'%20cy='31'%20r='2'/%3e%3ccircle%20class='st2'%20cx='277'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='277'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='270'%20cy='61'%20r='2'/%3e%3ccircle%20class='st2'%20cx='270'%20cy='51'%20r='2'/%3e%3ccircle%20class='st2'%20cx='270'%20cy='41'%20r='2'/%3e%3ccircle%20class='st2'%20cx='270'%20cy='31'%20r='2'/%3e%3ccircle%20class='st2'%20cx='270'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='270'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='263'%20cy='51'%20r='2'/%3e%3ccircle%20class='st2'%20cx='263'%20cy='41'%20r='2'/%3e%3ccircle%20class='st2'%20cx='263'%20cy='31'%20r='2'/%3e%3ccircle%20class='st2'%20cx='263'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='263'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='256'%20cy='51'%20r='2'/%3e%3ccircle%20class='st2'%20cx='256'%20cy='41'%20r='2'/%3e%3ccircle%20class='st2'%20cx='256'%20cy='31'%20r='2'/%3e%3ccircle%20class='st2'%20cx='256'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='256'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='249'%20cy='41'%20r='2'/%3e%3ccircle%20class='st2'%20cx='249'%20cy='31'%20r='2'/%3e%3ccircle%20class='st2'%20cx='249'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='249'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='242'%20cy='41'%20r='2'/%3e%3ccircle%20class='st2'%20cx='242'%20cy='31'%20r='2'/%3e%3ccircle%20class='st2'%20cx='242'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='242'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='235'%20cy='31'%20r='2'/%3e%3ccircle%20class='st2'%20cx='235'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='235'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='228'%20cy='31'%20r='2'/%3e%3ccircle%20class='st2'%20cx='228'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='228'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='221'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='221'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='214'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='214'%20cy='11'%20r='2'/%3e%3ccircle%20class='st2'%20cx='207'%20cy='21'%20r='2'/%3e%3ccircle%20class='st2'%20cx='207'%20cy='11'%20r='2'/%3e%3c/svg%3e" alt=""
+                        class="absolute top-0 left-0 opacity-0 group-hover:opacity-100 z-10">
+
+                    <img src="https://razorpay.com/build/browser/static/supercheckout-comp.49cd2f79.svg" alt=""
+                        class="w-10 relative z-20">
+                    <p class="text-[1.13rem] font-extrabold text-[#02042a] pb-3 pt-2 relative z-20">Magic Checkout</p>
+                    <p class="leading-6 opacity-60 pb-3 ">Improve your order conversion rates & reduce
+                        return-to-origins. Boost your business by 20%!</p>
+                    <a class="mt-8 text-skyblue font-bold">Know More <i
+                            class="fa-solid fa-chevron-right text-[8.5px] ml-1 font-bold"></i></a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="w-full h-auto bg-[url(./images/core-features-sectionBg.svg)] z-50 relative pt-40 bg-no-repeat pb-36   bg-cover bg-center smax:pt-72">
+            <div class=" flex flex-col justify-center items-center mt-5">
+                <p class="pt-5 text-white font-extrabold text-2xl mx-auto">Features</p>
+                <div class=" bg-limegreen  p-[0.1rem] w-6 mt-4 mx-auto"></div>
+                <p class="text-white w-[33%] text-center pt-5  lg:w-[85%] pb-6">Empower your business with all the right tools to accept
+                    online payments and provide the best customer experience</p>
+            </div>
+
+            <div class="w-[73%] mx-auto mt-2 grid grid-cols-[repeat(auto-fit,minmax(225px,1fr))] grid-rows-2 gap-[2rem] ">
+                <div>
+                    <img src="https://razorpay.com/build/browser/static/instant-activation.6f975aa6.svg" alt="">
+                    <p class="text-white font-bold pt-3 text-[1.15rem]">Instant Activation</p>
+                    <p class="text-white pt-3 w-[90%] pb-5">Get activated and transact within 2 minutes. Completely
+                        online onboarding with minimum documentation.</p>
+                </div>
+                <div>
+                    <img src="https://razorpay.com/build/browser/static/easy-integration.18651e2f.svg" alt="">
+                    <p class="text-white font-bold pt-3 text-[1.15rem]">Easy Integration</p>
+                    <p class="text-white pt-3  w-[90%] pb-5">With plugins for all major platforms and languages,
+                        integrate and go live with Razorpay in less than an hour.</p>
+                </div>
+                <div>
+                    <img src="https://razorpay.com/build/browser/static/api-driven.207572da.svg" alt="">
+                    <p class="text-white font-bold pt-3 text-[1.15rem]">API Driven</p>
+                    <p class="text-white pt-3 w-[90%] pb-5">Build your business for scale with our complete API-driven
+                        automation that requires zero manual intervention.</p>
+                </div>
+                <div>
+                    <img src="https://razorpay.com/build/browser/static/payment-modes.da25e039.svg" alt="">
+                    <p class="text-white font-bold pt-3 text-[1.15rem]">100+ payment modes</p>
+                    <p class="text-white pt-3 w-[90%] pb-5">Offer your customers the luxury of all payment modes
+                        including Credit/Debit cards, Netbanking, UPI, Wallets etc.</p>
+                </div>
+
+                <!-- <------->
+                <div>
+                    <img src="https://razorpay.com/build/browser/static/simple-pricing.dc58cdbb.svg" alt="">
+                    <p class="text-white font-bold pt-3 text-[1.15rem]">Simple Pricing</p>
+                    <p class="text-white pt-3 w-[80%] pb-5">Our innovative payment solutions with competitive pricing
+                        make payments simpler.</p>
+                </div>
+                <div>
+                    <img src="https://razorpay.com/build/browser/static/support.714ccbce.svg" alt="">
+                    <p class="text-white font-bold pt-3 text-[1.15rem]">Best in Industry Support</p>
+                    <p class="text-white pt-3 w-[90%] pb-5">Always available email, phone and chat based support to help
+                        you in your every step.</p>
+                </div>
+                <div>
+                    <img src="https://razorpay.com/build/browser/static/dashboard-reporting.15590378.svg" alt="">
+                    <p class="text-white font-bold pt-3 text-[1.15rem]">Dashboard Reporting</p>
+                    <p class="text-white pt-3 w-[90%] pb-5">Real-time data and insights on your Razorpay Dashboard to
+                        make informed business decisions.</p>
+                </div>
+                <div>
+                    <img src="https://razorpay.com/build/browser/static/secure.742a33ac.svg" alt="">
+                    <p class="text-white font-bold pt-3 text-[1.15rem]">Secure</p>
+                    <p class="text-white pt-3 w-[80%] pb-5">PCI DSS Level 1 compliant solution which removes your burden
+                        of regulatory compliance.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="w-full  h-auto  relative top-[-58px] bg-[#f5f8fe]">
+
+            <div class="w-[73%] mx-auto flex lg:flex-col lg:w-[80%]">
+                <div class="w-[55%] h-auto   flex  justify-center flex-col mx-auto lg:w-[80%]">
+
+                    <p class="mt-5 text-black font-extrabold text-2xl ">Join the 50,00,000 businesses using Razorpay
+                    </p>
+                    <div class=" bg-limegreen  p-[0.1rem] w-6 mt-4"></div>
+                    <p class="mt-6">We make it easier for you to focus on building great products while we work on
+                        simplifying your payments. Become one of us by joining thousands of our happy users and simplify
+                        the online payment experience for your customers.
+                    </p>
+                    <p class="mt-6">Focus on your business while we handle the complexities of payments for you.</p>
+                    <button class="px-4 py-3 bg-skyblue text-slate-50 font-bold mt-8 self-start rounded-md">Get Started
+                        &nbsp;<i class="fa-solid fa-arrow-right fa mr-2"></i></button>
+                </div>
+                <div class="w-[45%] max-h-[500px] overflow-y-hidden mx-auto  mt-7  lg:w-[60%] lg:max-h-[300px] smax:w-[80%] smaxx:w-[90%]">
+                    <div class="h-full   relative ">
+                        <img src="/assets/comanies-K_28dR6Q.png" alt="" class="com_name object-cover " loading="lazy">
+                        <img src="/assets/comanies-K_28dR6Q.png" alt="" class="com_name object-cover " loading="lazy">
+                        <img src="/assets/comanies-K_28dR6Q.png" alt="" class="com_name object-cover " loading="lazy">
+                        <div class="w-full h-[150px] top-0 absolute bg-gradient-to-b from-white"></div>
+                        <div class="w-full h-[150px] bottom-0  absolute bg-gradient-to-t from-white"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="h-auto w-[100%]  flex flex-col relative">
+            <div class="w-[73%] h-auto mx-auto flex flex-col items-center">
+                <p class="mt-5 text-black font-extrabold text-2xl text-center">An Experience<br>
+                    People Love to Talk About
+                </p>
+                <div class=" bg-limegreen  p-[0.1rem] w-6 mt-4 mx-auto"></div>
+            </div>
+
+            <div class="w-[80%]  h-auto flex items-center  mx-auto mt-24 relative mb-20 z-50 xll:flex-col">
+                <div class="w-[50%] items-center justify-center flex ">
+                    <img src="/assets/testimonial-9HbHycwy.jpg" alt="" class="w-[320px]  rounded-2xl z-50 min-w-[220px]">
+                </div>
+
+                <div class="w-[60%] lg:pt-5 lg:text-center md:w-[80%]">
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='108'%20height='90'%20viewBox='0%200%20108%2090'%3e%3cpath%20fill='%23515978'%20fill-rule='evenodd'%20d='M47.32%2047.35V0H0v30.59c0%2011.37%202.03%2021.66%206.1%2030.88C10.16%2070.7%2016.94%2080.2%2026.42%2090l17.13-13.82c-9.68-10-15.58-19.61-17.71-28.83h21.48zm60.68%200V0H60.68v30.59c0%2011.37%202.03%2021.66%206.1%2030.88C70.83%2070.7%2077.6%2080.2%2087.1%2090l17.13-13.82c-9.68-10-15.58-19.61-17.71-28.83H108z'%20opacity='.12'/%3e%3c/svg%3e" alt="" class="w-[40px]">
+                    <p class="text-3xl w-[75%] lg:w-[90%] font-extralight leading-[3rem] max:text-2xl">Improved The Bottom Line With Cash-Like
+                        Collection</p>
+                    <a href="#" class="italic underline font-extralight decoration-from-font">Learn More</a>
+                    <p class="text-[#02042a] font-extrabold text-2xl">Shrey Shingala</p>
+                    <p class="text-black py-1 font-medium">CEO, CodeCrafters Technologye</p>
+                    <img src="/assets/information-technology (1)-1YYAlrMq.png" alt="" class="w-[40px] pt-1 lg:block lg:mx-auto">
+                </div>
+            </div>
+
+
+            <svg viewBox="0 0 96 96" class="absolute top-[18rem] left-28 w-[100px] md:left-0 smaxx:w-[60px] max:hidden xxxl:left-5" focusable="false"
+                class="chakra-icon css-1dluisi">
+                <circle cx="48" cy="48" r="48" transform="rotate(180 48 48)" fill="#F4F8FF" fill-opacity="0.7"></circle>
+                <g style="mix-blend-mode: multiply;">
+                    <circle cx="48.0001" cy="47.9998" r="33.1034" transform="rotate(180 48.0001 47.9998)" fill="#F4F8FF"
+                        fill-opacity="0.7"></circle>
+                </g>
+                <g opacity="0.5">
+                    <g style="mix-blend-mode: multiply;">
+                        <rect x="52.3477" y="62.8967" width="20.6022" height="7.89307" rx="2"
+                            transform="rotate(-134.983 52.3477 62.8967)" fill="#28365E"></rect>
+                    </g>
+                    <rect x="57.9287" y="39.3738" width="20.6022" height="7.89307" rx="2"
+                        transform="rotate(135.302 57.9287 39.3738)" fill="#102562"></rect>
+                </g>
+            </svg>
+
+
+            <svg viewBox="0 0 96 96" focusable="false"
+                class="chakra-icon css-1dluisi absolute top-[18rem] right-28 w-[100px] md:right-0 smaxx:w-[60px] max:hidden xxxl:right-5">
+                <circle cx="48" cy="48" r="48" fill="#F4F8FF" fill-opacity="0.7"></circle>
+                <g style="mix-blend-mode: multiply;">
+                    <circle cx="48.0004" cy="48.0002" r="33.1034" fill="#F4F8FF" fill-opacity="0.7"></circle>
+                </g>
+                <g opacity="0.5">
+                    <g style="mix-blend-mode: multiply;">
+                        <rect x="43.6523" y="33.1033" width="20.6022" height="7.89307" rx="2"
+                            transform="rotate(45.0165 43.6523 33.1033)" fill="#28365E"></rect>
+                    </g>
+                    <rect x="38.0713" y="56.6262" width="20.6022" height="7.89307" rx="2"
+                        transform="rotate(-44.6979 38.0713 56.6262)" fill="#102562"></rect>
+                </g>
+            </svg>
+
+
+            <img src="data:image/png;base64,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" alt="" class="absolute top-14 left-32 scale-90  lg:hidden z-10" >
+
+            <div class="flex w-auto h-auto mx-auto gap-2 mb-3 emax:hidden">
+                <div class="p-[6px] bg-[#c4c4c4] hover:bg-skyblue rounded-full"></div>
+                <div class="p-[6px] bg-[#c4c4c4] hover:bg-skyblue rounded-full"></div>
+                <div class="p-[6px] bg-[#c4c4c4] hover:bg-skyblue rounded-full"></div>
+                <div class="p-[6px] bg-[#c4c4c4] hover:bg-skyblue rounded-full"></div>
+                <div class="p-[6px] bg-[#c4c4c4] hover:bg-skyblue rounded-full"></div>
+                <div class="p-[6px] bg-[#c4c4c4] hover:bg-skyblue rounded-full"></div>
+                <div class="p-[6px] bg-[#c4c4c4] hover:bg-skyblue rounded-full"></div>
+
+            </div>
+        </section>
+
+        <section
+            class="w-full h-auto bg-[url(./images/CTABg.svg)] bg-[length:100%_100%] items-center justify-center relative lg:bg-cover ">
+
+            <div class="w-[70%] mx-auto pt-24 flex ">
+                <div>
+                    <p class="mt-5 text-white font-extrabold text-2xl ">
+                        Supercharge your business with Razorpay
+                    </p>
+                    <div class=" bg-limegreen  p-[0.1rem] w-6 mt-4 "></div>
+                    <p class="text-white w-[60%]pt-6 pb-7 lg:w-[90%]">Sign up now to experience the future of payments and offer
+                        your customers the best checkout experience.</p>
+
+                    <ul class="flex text-white space-x-3 items-center flex-wrap list-outside">
+                        <li></li>
+                        <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAACxAAAAsQHGLUmNAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAX9JREFUSIntkDtIG1AUhr9zr68KOqioSMngJK7NpqVIlKSCY0uhe4XSWVAoXCUW6dC1Y52jk0ExMSWILmKLQqeCOHQRp0rbwUfOvR3qkncKGfOPh/9+3z0HWmml4aRcB6lntnRsmgLPuDHTpz+kb2y7+YK8e2isZoAhgcvmCnKL/UY1A0RE2PfWzpdWym7WcNKu27bJDsIj4JvvvEvwJPmntFa+Qd4Nc7jQUxP+5VW7PNDNIEwA576gcR6v/axULRakXbdR/W6uO0/JupGK8ICYq8FPAk+BS29tnMS7i2p/KRZ85VqEE2DUGM2SW+wve5B7+wHkJfDLi51lyp3VWlbKJjuu13b4z4EQFTjWrpsYk+9/38OXgFXg1kiYK8SS2VrwygKAvBswqvvAeIB8sHbWFvR5ENaBICIvNLayUQ9eXQCQdSPG6AEwKoGjIEQBSwiv/UzyYyPw2gKAPRcxogdA5F87OB9LLjcKry8AyLlxg+6CbPnplTf/A2+llebkL8Nddktkz132AAAAAElFTkSuQmCC" alt="" class="inline-block pr-3">Quick onboarding</li>
+                        <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAACxAAAAsQHGLUmNAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAX9JREFUSIntkDtIG1AUhr9zr68KOqioSMngJK7NpqVIlKSCY0uhe4XSWVAoXCUW6dC1Y52jk0ExMSWILmKLQqeCOHQRp0rbwUfOvR3qkncKGfOPh/9+3z0HWmml4aRcB6lntnRsmgLPuDHTpz+kb2y7+YK8e2isZoAhgcvmCnKL/UY1A0RE2PfWzpdWym7WcNKu27bJDsIj4JvvvEvwJPmntFa+Qd4Nc7jQUxP+5VW7PNDNIEwA576gcR6v/axULRakXbdR/W6uO0/JupGK8ICYq8FPAk+BS29tnMS7i2p/KRZ85VqEE2DUGM2SW+wve5B7+wHkJfDLi51lyp3VWlbKJjuu13b4z4EQFTjWrpsYk+9/38OXgFXg1kiYK8SS2VrwygKAvBswqvvAeIB8sHbWFvR5ENaBICIvNLayUQ9eXQCQdSPG6AEwKoGjIEQBSwiv/UzyYyPw2gKAPRcxogdA5F87OB9LLjcKry8AyLlxg+6CbPnplTf/A2+llebkL8Nddktkz132AAAAAElFTkSuQmCC" alt="" class="inline-block pr-3">Access to entire product suite
+                        </li>
+                        <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAACxAAAAsQHGLUmNAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAX9JREFUSIntkDtIG1AUhr9zr68KOqioSMngJK7NpqVIlKSCY0uhe4XSWVAoXCUW6dC1Y52jk0ExMSWILmKLQqeCOHQRp0rbwUfOvR3qkncKGfOPh/9+3z0HWmml4aRcB6lntnRsmgLPuDHTpz+kb2y7+YK8e2isZoAhgcvmCnKL/UY1A0RE2PfWzpdWym7WcNKu27bJDsIj4JvvvEvwJPmntFa+Qd4Nc7jQUxP+5VW7PNDNIEwA576gcR6v/axULRakXbdR/W6uO0/JupGK8ICYq8FPAk+BS29tnMS7i2p/KRZ85VqEE2DUGM2SW+wve5B7+wHkJfDLi51lyp3VWlbKJjuu13b4z4EQFTjWrpsYk+9/38OXgFXg1kiYK8SS2VrwygKAvBswqvvAeIB8sHbWFvR5ENaBICIvNLayUQ9eXQCQdSPG6AEwKoGjIEQBSwiv/UzyYyPw2gKAPRcxogdA5F87OB9LLjcKry8AyLlxg+6CbPnplTf/A2+llebkL8Nddktkz132AAAAAElFTkSuQmCC" alt="" class="inline-block pr-3">API access</li>
+                        <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAACxAAAAsQHGLUmNAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAX9JREFUSIntkDtIG1AUhr9zr68KOqioSMngJK7NpqVIlKSCY0uhe4XSWVAoXCUW6dC1Y52jk0ExMSWILmKLQqeCOHQRp0rbwUfOvR3qkncKGfOPh/9+3z0HWmml4aRcB6lntnRsmgLPuDHTpz+kb2y7+YK8e2isZoAhgcvmCnKL/UY1A0RE2PfWzpdWym7WcNKu27bJDsIj4JvvvEvwJPmntFa+Qd4Nc7jQUxP+5VW7PNDNIEwA576gcR6v/axULRakXbdR/W6uO0/JupGK8ICYq8FPAk+BS29tnMS7i2p/KRZ85VqEE2DUGM2SW+wve5B7+wHkJfDLi51lyp3VWlbKJjuu13b4z4EQFTjWrpsYk+9/38OXgFXg1kiYK8SS2VrwygKAvBswqvvAeIB8sHbWFvR5ENaBICIvNLayUQ9eXQCQdSPG6AEwKoGjIEQBSwiv/UzyYyPw2gKAPRcxogdA5F87OB9LLjcKry8AyLlxg+6CbPnplTf/A2+llebkL8Nddktkz132AAAAAElFTkSuQmCC" alt="" class="inline-block pr-3">24x7 support</li>
+                    </ul>
+                    <button
+                        class="bg-slate-50  text-skyblue font-bold px-5 py-3 mt-5 text-[0.9rem] rounded-sm mb-36">Sign
+                        UP Now &nbsp;<i class="fa-solid fa-arrow-right fa mr-2"></i></button>
+                </div>
+
+                <div class=" h-auto items-center pt-12 block lg:hidden">
+                    <img src="/assets/ctaImg-qNTk9ZM9.svg" alt="" class="w-[240px] ">
+                </div>
+            </div>
+            <div class="absolute bottom-0 w-full h-48 bg-[#edf7ff] -z-[10]"></div>
+        </section>
+
+        <section class="w-full h-auto bg-[#edf7ff]">
+            <footer class="w-[70%] mx-auto h-auto    grid grid-cols-[repeat(auto-fit,_minmax(200px,1fr))] ">
+                <div class="w-[85%]  pb-12">
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='316'%20height='67'%20fill='%23072654'%20viewBox='0%200%201896%20401'%3e%3cpath%20fill='%233395FF'%20d='M122.63%20105.7l-15.75%2057.97%2090.15-58.3-58.96%20219.98%2059.88.05L285.05.48'/%3e%3cpath%20d='M25.6%20232.92L.8%20325.4h122.73l50.22-188.13L25.6%20232.92m426.32-81.42c-3%2011.15-8.78%2019.34-17.4%2024.57-8.6%205.22-20.67%207.84-36.25%207.84h-49.5l17.38-64.8h49.5c15.56%200%2026.25%202.6%2032.05%207.9%205.8%205.3%207.2%2013.4%204.22%2024.6m51.25-1.4c6.3-23.4%203.7-41.4-7.82-54-11.5-12.5-31.68-18.8-60.48-18.8H324.4l-66.5%20248.1h53.67l26.8-100h35.2c7.9%200%2014.12%201.3%2018.66%203.8%204.55%202.6%207.22%207.1%208.04%2013.6l9.58%2082.6h57.5l-9.32-77c-1.9-17.2-9.77-27.3-23.6-30.3%2017.63-5.1%2032.4-13.6%2044.3-25.4a92.6%2092.6%200%200%200%2024.44-42.5m130.46%2086.4c-4.5%2016.8-11.4%2029.5-20.73%2038.4-9.34%208.9-20.5%2013.3-33.52%2013.3-13.26%200-22.25-4.3-27-13-4.76-8.7-4.92-21.3-.5-37.8%204.42-16.5%2011.47-29.4%2021.17-38.7%209.7-9.3%2021.04-13.95%2034.06-13.95%2013%200%2021.9%204.5%2026.4%2013.43%204.6%208.97%204.7%2021.8.2%2038.5zm23.52-87.8l-6.72%2025.1c-2.9-9-8.53-16.2-16.85-21.6-8.34-5.3-18.66-8-30.97-8-15.1%200-29.6%203.9-43.5%2011.7-13.9%207.8-26.1%2018.8-36.5%2033-10.4%2014.2-18%2030.3-22.9%2048.4-4.8%2018.2-5.8%2034.1-2.9%2047.9%203%2013.9%209.3%2024.5%2019%2031.9%209.8%207.5%2022.3%2011.2%2037.6%2011.2a82.4%2082.4%200%200%200%2035.2-7.7%2082.11%2082.11%200%200%200%2028.4-21.2l-7%2026.16h51.9L709.3%20149h-52zm238.65%200H744.87l-10.55%2039.4h87.82l-116.1%20100.3-9.92%2037h155.8l10.55-39.4h-94.1l117.88-101.8m142.4%2052c-4.67%2017.4-11.6%2030.48-20.75%2039-9.15%208.6-20.23%2012.9-33.24%2012.9-27.2%200-36.14-17.3-26.86-51.9%204.6-17.2%2011.56-30.13%2020.86-38.84%209.3-8.74%2020.57-13.1%2033.82-13.1%2013%200%2021.78%204.33%2026.3%2013.05%204.52%208.7%204.48%2021.67-.13%2038.87m30.38-80.83c-11.95-7.44-27.2-11.16-45.8-11.16-18.83%200-36.26%203.7-52.3%2011.1a113.09%20113.09%200%200%200-41%2032.06c-11.3%2013.9-19.43%2030.2-24.42%2048.8-4.9%2018.53-5.5%2034.8-1.7%2048.73%203.8%2013.9%2011.8%2024.6%2023.8%2032%2012.1%207.46%2027.5%2011.17%2046.4%2011.17%2018.6%200%2035.9-3.74%2051.8-11.18%2015.9-7.48%2029.5-18.1%2040.8-32.1%2011.3-13.94%2019.4-30.2%2024.4-48.8%205-18.6%205.6-34.84%201.8-48.8-3.8-13.9-11.7-24.6-23.6-32.05m185.1%2040.8l13.3-48.1c-4.5-2.3-10.4-3.5-17.8-3.5-11.9%200-23.3%202.94-34.3%208.9-9.46%205.06-17.5%2012.2-24.3%2021.14l6.9-25.9-15.07.06h-37l-47.7%20176.7h52.63l24.75-92.37c3.6-13.43%2010.08-24%2019.43-31.5%209.3-7.53%2020.9-11.3%2034.9-11.3%208.6%200%2016.6%201.97%2024.2%205.9m146.5%2041.1c-4.5%2016.5-11.3%2029.1-20.6%2037.8-9.3%208.74-20.5%2013.1-33.5%2013.1s-21.9-4.4-26.6-13.2c-4.8-8.85-4.9-21.6-.4-38.36%204.5-16.75%2011.4-29.6%2020.9-38.5%209.5-8.97%2020.7-13.45%2033.7-13.45%2012.8%200%2021.4%204.6%2026%2013.9%204.6%209.3%204.7%2022.2.28%2038.7m36.8-81.4c-9.75-7.8-22.2-11.7-37.3-11.7-13.23%200-25.84%203-37.8%209.06-11.95%206.05-21.65%2014.3-29.1%2024.74l.18-1.2%208.83-28.1h-51.4l-13.1%2048.9-.4%201.7-54%20201.44h52.7l27.2-101.4c2.7%209.02%208.2%2016.1%2016.6%2021.22%208.4%205.1%2018.77%207.63%2031.1%207.63%2015.3%200%2029.9-3.7%2043.75-11.1%2013.9-7.42%2025.9-18.1%2036.1-31.9%2010.2-13.8%2017.77-29.8%2022.6-47.9%204.9-18.13%205.9-34.3%203.1-48.45-2.85-14.17-9.16-25.14-18.9-32.9m174.65%2080.65c-4.5%2016.7-11.4%2029.5-20.7%2038.3-9.3%208.86-20.5%2013.27-33.5%2013.27-13.3%200-22.3-4.3-27-13-4.8-8.7-4.9-21.3-.5-37.8%204.4-16.5%2011.42-29.4%2021.12-38.7%209.7-9.3%2021.05-13.94%2034.07-13.94%2013%200%2021.8%204.5%2026.4%2013.4%204.6%208.93%204.63%2021.76.15%2038.5zm23.5-87.85l-6.73%2025.1c-2.9-9.05-8.5-16.25-16.8-21.6-8.4-5.34-18.7-8-31-8-15.1%200-29.68%203.9-43.6%2011.7-13.9%207.8-26.1%2018.74-36.5%2032.9-10.4%2014.16-18%2030.3-22.9%2048.4-4.85%2018.17-5.8%2034.1-2.9%2047.96%202.93%2013.8%209.24%2024.46%2019%2031.9%209.74%207.4%2022.3%2011.14%2037.6%2011.14%2012.3%200%2024.05-2.56%2035.2-7.7a82.3%2082.3%200%200%200%2028.33-21.23l-7%2026.18h51.9l47.38-176.7h-51.9zm269.87.06l.03-.05h-31.9c-1.02%200-1.92.05-2.85.07h-16.55l-8.5%2011.8-2.1%202.8-.9%201.4-67.25%2093.68-13.9-109.7h-55.08l27.9%20166.7-61.6%2085.3h54.9l14.9-21.13c.42-.62.8-1.14%201.3-1.8l17.4-24.7.5-.7%2077.93-110.5%2065.7-93%20.1-.06h-.03z'/%3e%3c/svg%3e" alt="" class="w-36 p-4">
+                    <p class="leading-5 pb-3 opacity-60 text-[14.5px]">Razorpay is the only payments solution in India
+                        that allows businesses to accept, process and disburse payments with its product suite. It gives
+                        you access to all payment modes including credit card, debit card, netbanking, UPI and popular
+                        wallets including JioMoney, Mobikwik, Airtel Money, FreeCharge, Ola Money and PayZapp.</p>
+                    <p class="leading-5 pb-3 opacity-60 text-[14.5px]">RazorpayX supercharges your business banking
+                        experience, bringing effectiveness, efficiency, and excellence to all financial processes. With
+                        RazorpayX, businesses can get access to fully-functional current accounts, supercharge their
+                        payouts and automate payroll compliance.</p>
+                    <p class="leading-5 pb-3 opacity-60 text-[14.5px]">
+                        Manage your marketplace, automate bank transfers, collect recurring payments, share invoices
+                        with customers and avail working capital loans - all from a single platform. Fast forward your
+                        business with Razorpay.
+                    </p>
+                    <p class="leading-3 pb-6 opacity-60 text-[11px]">Disclaimer: The RazorpayX powered Current Account
+                        and VISA corporate credit card are provided by RBI licensed banks. Your RazorpayX powered
+                        current account is provided by our partner banks i.e, ICICI & RBL bank, in accordance with RBI
+                        regulations. RazorpayX itself is not a bank and doesn't hold or claim to hold a banking license.
+                    </p>
+                    <div class="flex justify-around ">
+                        <img src="/assets/footer-certificate-1-tYqF0OEz.png" alt="" class="w-[91px] h-[40px]">
+                        <img src="/assets/footer-certificate-2-V3pMLiCG.jpg" alt="" class="w-[122px] h-[80px]">
+                    </div>
+
+                </div>
+                <div class="w-[100%] 	">
+                    <p class="text-[#525a76] text-[17px] font-semibold">BANKING PLUS</p>
+                    <p class="footer_class">RazorpayX</p>
+                    <p class="footer_class">Source to pay</p>
+                    <p class="footer_class">Current </p>
+                    <p class="footer_class">Payouts</p>
+                    <p class="footer_class">Payout Links
+                    <p class="footer_class pb-5">Corporate Credit Card
+
+                    <p class="text-[#525a76] text-[17px] font-semibold">LENDING
+                    <p class="footer_class">Razorpay Capital</p>
+                    <p class="footer_class">Instant Settlements</p>
+                    <p class="footer_class">Line of Credit</p>
+                    <p class="footer_class">Working Capital Loans</p>
+                    <p class="footer_class">Marketplace Instant </p>
+                    <p class="footer_class pb-5">Settlements</p>
+
+                    <p class="text-[#525a76] text-[17px] font-semibold">BECOME A PARTNER
+                    <p class="footer_class">Refer and Earn</p>
+                    <p class="footer_class pb-5">Onboarding APIs</p>
+
+                    <p class="text-[#525a76] text-[17px] font-semibold">MORE</p>
+                    <p class="footer_class">Route</p>
+                    <p class="footer_class">Invoices</p>
+                    <p class="footer_class">Freelancer Payments</p>
+                    <p class="footer_class">International</p>
+                    <p class="footer_class">Flash Checkout</p>
+                    <p class="footer_class">UPI</p>
+                    <p class="footer_class">ePOS</p>
+                    <p class="footer_class">Checkout Demo</p>
+                    <p class="pb-5 footer_class">RazorpayX Payroll</p>
+                </div>
+                <div class="w-[100%] ">
+
+                    <p class="text-[#525a76] text-[17px] font-semibold">ACCEPT PAYMENTS</p>
+                    <p class="footer_class">Payment Gateway</p>
+                    <p class="footer_class">Payment Pages</p>
+                    <p class="footer_class">Payment Links</p>
+                    <p class="footer_class">Razorpay POS <span
+                            class="bg-[#08c972] text-white font-bold text-xs px-1  py-[2px] rounded-sm">NEW</span></p>
+                    <p class="footer_class">QR Codes</p>
+                    <p class="footer_class">Subscriptions</p>
+                    <p class="footer_class">Smart Collect</p>
+                    <p class="pb-5 footer_class">Optimizer</p>
+
+                    <p class="text-[#525a76] text-[17px] font-semibold">DEVELOPERS</p>
+                    <p class="footer_class">Docs</p>
+                    <p class="footer_class">Integrations</p>
+                    <p class="pb-5 footer_class">API Reference</p>
+
+                    <p class="text-[#525a76] text-[17px] font-semibold">RESOURCES</p>
+                    <p class="footer_class">Blog</p>
+                    <p class="footer_class">Customer Stories</p>
+                    <p class="footer_class">Events</p>
+                    <p class="footer_class">Chargeback Guide</p>
+                    <p class="pb-5 footer_class">Settlement Guide</p>
+
+                    <p class="text-[#525a76] text-[17px] font-semibold">SOLUTIONS</p>
+                    <p class="footer_class">Education</p>
+                    <p class="footer_class">E-commerce</p>
+                    <p class="footer_class">SaaS</p>
+                    <p class="pb-5 footer_class">BFSI</p>
+
+                    <p class="text-[#525a76] text-[17px] font-semibold">FREE TOOLS</p>
+                    <p class="footer_class">GST Calculator</p>
+                    <p class="footer_class">Online TDS Payment</p>
+                    <p class="footer_class">GST Number Search</p>
+                    <p class="footer_class">GST Search by PAN</p>
+                    <p class="footer_class">ROI Calculator <span
+                            class="bg-[#08c972] text-white font-bold text-xs px-1 rounded-sm py-[2px]">NEW</span></p>
+                    <p class="footer_class">CAGR Calculator <span
+                            class="bg-[#08c972] text-white font-bold text-xs px-1 rounded-sm py-[2px]">NEW</span></p>
+                    <p class="pb-5 footer_class">EBITDA Calculator <span
+                            class="bg-[#08c972] text-white font-bold text-xs px-1 rounded-sm py-[2px]">NEW</span></p>
+                </div>
+                <div class="">
+
+                    <p class="text-[#525a76] text-[17px] font-semibold">COMPANY</p>
+                    <p class="footer_class">About Us</p>
+                    <p class="footer_class">Careers</p>
+                    <p class="footer_class">Terms of Use</p>
+                    <p class="footer_class">Privacy Policy</p>
+                    <p class="footer_class">Grievance Redressal</p>
+                    <p class="footer_class">Responsible Disclosure</p>
+                    <p class="footer_class">Partners</p>
+                    <p class="footer_class">White papers</p>
+                    <p class="pb-5 footer_class">Corporate Information</p>
+
+                    <p class="text-[#525a76] text-[17px] font-semibold">HELP & SUPPORT</p>
+                    <p class="footer_class">Support</p>
+                    <p class="pb-5 footer_class">Knowledge base</p>
+
+                    <p class="text-[#525a76] text-[17px] font-semibold pb-3">FIND US ONLINE</p>
+                    <div class="flex items-center justify-start space-x-4 pb-5">
+                        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%3e%3cpath%20fill='%2339579A'%20fill-rule='evenodd'%20d='M0%203.99C0%201.79%201.78%200%203.99%200h16.02C22.21%200%2024%201.78%2024%203.99v16.02c0%202.2-1.78%203.99-3.99%203.99H3.99A3.99%203.99%200%200%201%200%2020.01V3.99zm20%20.15C19.66%204.1%2018.47%204%2017.1%204c-2.88%200-4.85%201.66-4.85%204.7v2.62H9v3.56h3.25V24h3.9v-9.12h3.23l.5-3.56h-3.74V9.05c0-1.02.3-1.73%201.86-1.73h2V4.14z'/%3e%3c/svg%3e" alt="">
+                        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%3e%3cpath%20fill='%2300ABF0'%20fill-rule='evenodd'%20d='M0%203.99C0%201.79%201.78%200%203.99%200h16.02C22.21%200%2024%201.78%2024%203.99v16.02c0%202.2-1.78%203.99-3.99%203.99H3.99A3.99%203.99%200%200%201%200%2020.01V3.99zm19.5%203.42c-.56.25-1.14.4-1.77.5a3.07%203.07%200%200%200%201.36-1.7c-.6.35-1.26.61-1.96.74A3.07%203.07%200%200%200%2014.89%206a3.05%203.05%200%200%200-3%203.72%208.79%208.79%200%200%201-6.36-3.17%203.04%203.04%200%200%200%20.9%204.05c-.5-.01-1-.16-1.46-.37v.02a3.1%203.1%200%200%200%202.53%202.98%202.6%202.6%200%200%201-.74.11c-.2%200-.38-.03-.58-.06a3.09%203.09%200%200%200%202.88%202.1%206.26%206.26%200%200%201-4.56%201.26A8.87%208.87%200%200%200%209.22%2018a8.63%208.63%200%200%200%208.76-8.63c0-.12%200-.25-.02-.38.6-.42%201.13-.96%201.54-1.58z'/%3e%3c/svg%3e" alt="">
+                        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%3e%3cpath%20fill='%23E22470'%20fill-rule='evenodd'%20d='M0%203.99C0%201.79%201.78%200%203.99%200h16.02C22.21%200%2024%201.78%2024%203.99v16.02c0%202.2-1.78%203.99-3.99%203.99H3.99A3.99%203.99%200%200%201%200%2020.01V3.99zM20.57%2012c0-1.18.01-2.35-.05-3.54a5.1%205.1%200%200%200-1.39-3.59%205.1%205.1%200%200%200-3.59-1.38c-1.18-.07-2.35-.06-3.54-.06-1.18%200-2.35-.01-3.54.06a5.1%205.1%200%200%200-3.59%201.38%205.1%205.1%200%200%200-1.38%203.6c-.07%201.18-.06%202.35-.06%203.53%200%201.19-.01%202.36.06%203.54a5.1%205.1%200%200%200%201.38%203.6c1%201%202.22%201.31%203.6%201.38%201.18.06%202.35.05%203.53.05%201.19%200%202.36.01%203.54-.05a5.1%205.1%200%200%200%203.6-1.39c1-1%201.31-2.22%201.38-3.59.06-1.18.05-2.35.05-3.54zM12%204.97c1.25%200%203.93-.1%205.06.35.39.15.68.34.98.64.3.3.5.6.65.99.44%201.12.34%203.8.34%205.05s.1%203.93-.34%205.06a2.8%202.8%200%200%201-.65.98c-.3.3-.6.5-.98.65-1.13.44-3.8.34-5.06.34-1.25%200-3.93.1-5.05-.34a2.84%202.84%200%200%201-1.63-1.63c-.45-1.13-.35-3.8-.35-5.06%200-1.25-.1-3.93.35-5.05.15-.4.34-.68.64-.99.3-.3.6-.49.99-.64%201.12-.45%203.8-.35%205.05-.35zM16.4%2012a4.4%204.4%200%201%200-8.78%200%204.4%204.4%200%200%200%208.78%200zm1.2-4.57a1.02%201.02%200%200%200-2.05%200c0%20.57.46%201.02%201.03%201.02.57%200%201.02-.45%201.02-1.02zM14.86%2012a2.86%202.86%200%200%201-5.72%200%202.86%202.86%200%200%201%205.72%200z'/%3e%3c/svg%3e" alt="">
+                        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%3e%3cpath%20fill='%23171515'%20fill-rule='evenodd'%20d='M0%203.99C0%201.79%201.78%200%203.99%200h16.02C22.21%200%2024%201.78%2024%203.99v16.02c0%202.2-1.78%203.99-3.99%203.99H3.99A3.99%203.99%200%200%201%200%2020.01V3.99zm21.5%208.25c0%204.3-2.73%207.95-6.5%209.24-.48.1-.64-.2-.64-.47l.02-2.67c0-.9-.32-1.5-.65-1.8%202.11-.25%204.34-1.07%204.34-4.82%200-1.06-.37-1.92-.99-2.6.1-.25.43-1.24-.09-2.59-.8-.24-2.61%201.01-2.61%201.01A8.24%208.24%200%200%200%2012%207.22c-.82%200-1.61.1-2.38.32%200%200-1.81-1.25-2.61-1a3.62%203.62%200%200%200-.1%202.58%203.78%203.78%200%200%200-.98%202.6c0%203.73%202.23%204.57%204.34%204.82-.27.24-.52.68-.6%201.3-.55.26-1.94.7-2.77-.8-.52-.94-1.45-1.02-1.45-1.02-.93%200-.07.61-.07.61.63.29%201.05%201.41%201.05%201.41.56%201.75%203.2%201.16%203.2%201.16l.01%201.8c0%20.27-.16.58-.65.48a9.74%209.74%200%200%201-6.49-9.24A9.62%209.62%200%200%201%2012%202.5c5.25%200%209.5%204.36%209.5%209.74z'/%3e%3c/svg%3e" alt="">
+                        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cdefs%3e%3cstyle%3e.cls-2{fill:%23fffffe}%3c/style%3e%3c/defs%3e%3cg%20id='Layer_2'%20data-name='Layer%202'%3e%3cg%20id='Layer_1-2'%20data-name='Layer%201'%3e%3cg%20id='Grids-and-Templates'%3e%3cg%20id='linkedin'%3e%3cg%20id='Group-5'%3e%3crect%20id='Fill-4'%20width='24'%20height='24'%20rx='4'%20ry='4'%20fill='%230071a1'/%3e%3c/g%3e%3cpath%20id='Fill-6'%20class='cls-2'%20d='M5.4%203.3a2.07%202.07%200%201%201-2.09%202.07A2.08%202.08%200%200%201%205.4%203.3zM3.6%2020.45h3.6V9H3.6z'/%3e%3cpath%20id='Fill-7'%20class='cls-2'%20d='M9.46%209h3.45v1.56H13a3.8%203.8%200%200%201%203.41-1.85c3.65%200%204.32%202.37%204.32%205.46v6.28h-3.6v-5.57c0-1.33%200-3-1.87-3s-2.16%201.45-2.16%202.95v5.66H9.46V9'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt="" class="w-[25px]">
+                    </div>
+
+                    <p class="text-[#525a76] text-[17px] font-semibold pb-1"> REGD. OFFICE ADDRESS</p>
+                    <p class="footer_address">Razorpay Software Private Limited,</p>
+                    <p class="footer_address">1st Floor, SJR Cyber,</p>
+                    <p class="footer_address">22 Laskar Hosur Road, Adugodi,</p>
+                    <p class="footer_address">Bengaluru, 560030,</p>
+                    <p class="footer_address">Karnataka, India</p>
+                    <p class="footer_address pb-7">CIN: U72200KA2013PTC097389</p>
+
+                    <p class="footer_address">© Razorpay 2024</p>
+                    <p class="footer_address">All Rights Reserved</p>
+                </div>
+
+            </footer>
+        </section>
+
+    </div>
+</body>
+
+</html>

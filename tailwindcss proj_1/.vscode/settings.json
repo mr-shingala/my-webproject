@@ -1,0 +1,6 @@
+{
+    "editor.inlayHints.fontSize": 5,
+    "editor.suggestFontSize": 14,
+    "notebook.markup.fontSize": 40,
+    "notebook.output.fontSize": 40
+}

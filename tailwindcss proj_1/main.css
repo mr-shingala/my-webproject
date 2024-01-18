@@ -1,0 +1,53 @@
+ 
+@tailwind base;
+@tailwind components;
+
+
+@tailwind utilities;
+
+@layer components{
+
+ .footer_class{
+ @apply hover:text-[#344a6c] text-[#0b72e7] leading-6 text-[14.8px];
+
+ }
+ .footer_address{
+  @apply  text-base font-normal leading-5 text-[14px];
+ }
+
+ .com_name{
+  animation-name: scrollname;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+  direction: normal;
+  
+ }
+ .com_name2{
+  animation-name: scrollname2;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+  direction: normal;
+ }
+ @keyframes scrollname {
+   0%{
+      transform: translateY(0);
+   }
+   100%{
+      
+      transform: translateY(-60%);
+   }
+  
+ }
+ @keyframes scrollname2{
+  0%{
+     transform: translateY(0);
+  }
+  100%{
+     
+     transform: translateY(-40%);
+  }
+ 
+ }
+}

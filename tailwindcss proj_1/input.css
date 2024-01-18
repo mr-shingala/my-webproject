@@ -1,0 +1,73 @@
+.card{
+    transition-duration: 240ms;
+    transition-property: all;
+    transition-timing-function: ease;
+    /* background: red; */
+    opacity: 0;
+    
+}
+.mycard:hover .card{
+    opacity: 1;
+}
+.mycard2:hover .card{
+    opacity: 1;
+}
+.mycard:hover .cardc{
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0.6111694677871149) 0%, rgba(91,181,249,1) 6%, rgba(75,172,250,1) 31%, rgba(52,158,252,1) 68%, rgba(44,153,253,1) 81%, rgba(32,146,254,1) 100%);
+}
+.mycard:hover{
+     filter: drop-shadow(0px 2px 22px rgba(202, 202, 202, 0.25));
+}
+.mycard2:hover .svgshadow{
+    filter: drop-shadow(0px 2px 24px rgba(0, 0, 0, 0.4));;
+    
+}
+.bg_text{
+    background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(226,237,253,1) 86%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.class-4{
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+/* .com_name{
+    animation-name: scrollname;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+    direction: normal;
+    
+}
+.com_name2{
+    animation-name: scrollname2;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+    direction: normal;
+}
+@keyframes scrollname {
+     0%{
+        transform: translateY(0);
+     }
+     100%{
+        
+        transform: translateY(-60%);
+     }
+    
+}
+@keyframes scrollname2{
+    0%{
+       transform: translateY(0);
+    }
+    100%{
+       
+       transform: translateY(-50%);
+    }
+   
+} */
