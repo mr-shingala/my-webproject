@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="style.css">
+ <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+      <div class="head_box">
+          <p class="P_first">DevDetective</p>
+          <div>
+           <div class="toggle" id="toggle">
+            <div class="circule"  id="circule"></div>
+           </div>
+          </div>
+      </div>
+<!-- =========================================== -->
+    
+    <div class="serchbox" id="serchbox">
+        <div class="serchbox1">
+         <img src="search.png" alt="" class="img">
+        <input type="text" placeholder="Enter User Name.." id="text1">
+       </div>
+        <button id="serch">Serch</button>
+    </div>
+
+
+
+<!-- 
+================================================== -->
+      <div class="resultbox" id="resultbox">
+           <div class="avtar_class">
+               <div class="avtar_div" id="avtar_div">
+                   
+               </div>
+           </div>
+
+           <div class="userinfo_div">
+                <div class="user_name">
+                   <p id="username"></p>
+                   <p id="user_date">joined 16 jan 2017</p>
+                </div>
+                <div class="user_account_link" id="user_account_link">
+                    
+                </div>
+                <div>
+                   <p class="user_bio" id="user_bio"></p>
+                </div>
+                <div class="followers">
+                      <div>
+                         <p class="hading_foll">public Repos</p>
+                         <p id="p_repos"></p>
+                      </div>
+                      <div>
+                         <p class="hading_foll">Followers</p>
+                         <p  id="followers"></p>
+                      </div>
+                      <div>
+                         <p class="hading_foll">Following</p>
+                         <p  id="following"></p>
+                      </div>
+                </div>
+
+                <div class="user_content">
+                     <div class="user_content1">
+                         <p class="city_name" id="city"></p>
+                         <p class="teitter_link" id="twitter"></p>
+                     </div>
+                     <div class="user_content2">
+                         <p id="blog"></p>
+                         <p id="company"></p>
+                     </div>
+                  
+                </div>
+           </div>
+      </div>
+<!-- ======================================================================= -->
+<div id="error_box">
+      <img src="no-results.png" alt="">
+      <h2>Not Found</h2>
+</div>
+      
+<script src="logic.js"></script>
+</body>
+</html>

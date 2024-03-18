@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   border: none;
+   box-sizing: border-box;
+   font-family: "Anta", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   color:  #113f67;
+}
+
+html,body{
+ width: 100%;
+ height: 100%;
+ background-color: #e7eaf6;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.container{
+    background-color: #a2a8d3;
+    border: 2px solid #38598b;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+#main-head{
+   font-weight: bold;
+   margin-bottom: 20px;
+   font-size: 40px;
+}
+.sub-info{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+input{
+   padding: 10px;
+   border: 2px solid #38598b;
+   width: 100%;
+   border-radius: 5px;
+   background-color: #e7eaf6;
+   font-weight: bold;
+}
+.slection{
+   /* background-color: brown; */
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.sub-from{
+   background-color: #e7eaf6;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 2px solid #38598b;
+   border-radius: 5px;
+   height: 64px;
+}
+img{
+   padding-left: 5px;
+}
+.m-left{
+   margin-left: 30px;
+}
+select{
+   background-color: #e7eaf6;
+
+   /* border: none; */
+   outline:0px;
+}
+
+button{
+   margin-top: 10px;
+   margin-bottom: 20px;
+   width: 100%;
+   padding: 10px;
+   font-weight: bold;
+   font-size: 20px;
+   background-color: #113f67;
+   color: #e7eaf6;
+   border: 2px solid #e7eaf6;
+   border-radius: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (width <= 575px) {
+
+
+   .container{
+      margin-top: 150px;
+      margin-bottom: 150px;
+   }
+   #main-head{
+      
+      font-size: 35px;
+   }
+   .slection{
+      /* background-color: brown; */
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+         
+   }
+
+   .m-left{
+      margin-left: 0px;
+   }
+   .sub-info{
+      width: 100%;
+  }
+
+}
+
+@media (width <= 413px) {
+   
+
+   .sub-info{
+      margin-bottom: 5px;
+   }
+   #main-head{ 
+      
+      font-size: 30px;
+   }
+   .container{
+      background-color: #a2a8d3;
+      border: 2px solid #38598b;
+      border-radius: 10px;
+      padding: 20px;
+  }
+  
+
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Master</title>
+  <link rel="shortcut icon" href="currency.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <dic class="container">
+    <h1 id="main-head">Currency Coverter</h1>
+    <p class="sub-info">Enter Amount</p>
+    <input type="number" name="" id="amount" value="1">
+    <p class="sub-info">select currency</p>
+    <div class="slection">
+      <div class="from">
+        <p class="sub-info">From</p>
+        <div class="sub-from">
+        <img src="flag (2).png"  alt="" id="img1">
+        <select id="fromOption">
+          <option value="none" selected disabled hidden>Select an Currency</option> 
+             <!-- add js logic -->
+        </select>
+      </div>
+      </div>
+
+      <div class="from">
+        <p class="sub-info m-left">To</p>
+        <div class="sub-from m-left">
+        <img src="flag (2).png" alt="" id="img2">
+        <select id="toOption">
+          <option value="none" selected disabled hidden>Select an Currency</option> 
+            <!-- add js logic -->
+        </select>
+      </div>
+      </div>
+
+    </div>
+    <div>
+      <p id="result" class="sub-info">-- FROM &nbsp;=&nbsp; -- TO</p>
+    </div>
+  </div>
+
+   <div>
+        <button id="result_bt">Get Exchang Value</button>
+   </div>
+
+<script src="cc-code.js"></script>
+<script  src="logic1.js"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Baloo Bhai 2", sans-serif;
+ font-optical-sizing: auto;
+ overflow: hidden;
+}
+ .imag-container{
+   width: 100vw;
+   min-height: 100vh;
+   background-image: url(we.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: bottom;
+   position: relative;
+
+
+   
+   
+}
+ .imag-container::after{
+   content: "";
+   width: 100%;
+   min-height: 100%;
+   position: absolute;
+   background-color: rgba(0, 0, 0, 0.473);
+   top: 0;
+   left: 0; 
+   overflow: hidden;
+ 
+}  
+.conatiner{
+  width: 100%;
+  /* min-height: 100%; */
+  padding: 70px;
+  overflow: hidden;
+  height: auto;
+  position: relative;
+  z-index: 100;
+  /* background-color: #FF577F; */
+}
+
+.serch{
+ 
+  width: 50%;
+ display: flex;
+ align-items: center;
+ overflow: hidden;
+
+
+}
+.serch input{
+ padding: 15px;
+ font-size: 20px;
+ border-radius: 30px;
+  font-weight: bold;
+  margin-right: 10px;
+  /* margin-left: 10%; */
+  border: 3px solid black;
+  overflow: hidden;
+  outline: none;
+}
+.serch button{
+  padding: 16px;
+  font-size: 25px;
+   border-radius: 30px;
+   font-weight: bold;
+   /* border: none; */
+   border: 2px solid black;
+   overflow: hidden;
+}
+button:hover{
+  background-color: #FFDDCC;
+}
+
+#city_name{
+   font-size: 60px;
+   font-weight: bold;
+   color: white;
+   border-bottom: 4px solid white;
+   text-transform: capitalize;
+  
+
+}
+.se_bar{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+/* background-color: aqua; */
+width: 84%;
+overflow: hidden;
+  
+}
+.main-info-container{
+   width: 100%;
+   height: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   overflow: hidden;
+}
+.main-info-card{
+ 
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+}
+#img{
+
+  width: 250px;
+   /* position: absolute;
+  top: -55px;  */
+}
+.temp{
+   font-size: 60px;
+   font-weight: bold;
+   color: white;
+   position: absolute;
+   top: 170px;
+   
+
+}
+#main{
+
+ font-size: 35px;
+ font-weight: bold;
+ color: white;
+}
+
+span i{
+ color: white;
+}
+.other_info{
+   width: 800px;
+   overflow: hidden;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.flex p{
+   font-size: 30px;
+   color: white;
+   font-weight: bold;
+   overflow: hidden;
+}
+#span1,
+#span5,
+#span2,
+#span3,
+#span4,
+#span41,
+#span6{
+   color: #FF577F;
+
+}
+
+.loader{
+  
+     font-size: 20px;
+     font-weight: bold;
+    color: white;
+    z-index: 10; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height:80px;
+
+}
+.animation{
+   animation-duration: 2s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   margin-left: 10px;
+} 
+.a1{
+   animation-name: a1;
+}
+
+@keyframes a1 {
+   0%{
+      
+      transform: translateY(0px);
+   }
+   50%{
+      transform: translateY(-20px);
+   }
+   100%{
+      transform: translateY(0px);
+   }
+}
+
+
+.a2{
+   animation-name: a2;
+}
+
+@keyframes a2 {
+   0%{
+      
+      transform: translateY(0px);
+   }
+   50%{
+      transform: translateY(20px);
+   }
+   100%{
+      transform: translateY(0px);
+   }
+}
+
+@media (width = 1024px ){
+    *{
+      overflow-y: scroll;
+    }
+}  
+
+@media (width <= 950px ) {
+   
+
+ 
+    .flex{
+       margin-top: 50px;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+}
+@media (width <= 855px ) {
+   
+   
+   .se_bar{
+      flex-direction: column;
+     width: 100%;
+     height: auto;
+     overflow-y: hidden;
+
+     }
+     .serch{
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      overflow-y: hidden;
+    
+
+    }
+     .conatiner{
+      padding: 15px;   
+
+    } 
+   
+   .flex,.foother_in{
+      overflow-y: hidden;
+   }
+   .loader{
+      margin-bottom: 30px;
+  }
+  
+}   
+@media (width <= 600px){
+   *{
+      overflow-y: scroll;
+   }
+}
+@media (width <= 465px) {
+   *{
+      overflow-y: scroll;
+   }
+   .flex p{
+      font-size: 6.5vw;
+   }
+}
+@media (width <= 368px) {
+   .serch{
+       flex-wrap: wrap;
+     
+    }
+    button{
+      width: 50%;
+       margin-top: 15px;
+    }
+}
+@media (width <= 312px) {
+   *{
+      overflow: scroll;
+      
+   }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>My weather App</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ <link rel="stylesheet" href="style.css">
+ <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="imag-container">
+<div class="conatiner">
+
+  <!-- //================================== -->
+ <div class="se_bar">
+  <div class="serch">
+   <input type="text" placeholder="enter city name" id="city_value">
+   <button class="fa-solid fa-magnifying-glass" id="result_button"></button>
+  </div>
+  <div>
+      <p id="city_name">CITY</p>
+  </div>
+ </div> 
+<!-- 
+ ================================= -->
+  <div class="loader" id="loader">
+     <p class="animation a1">Data</p>
+     <p class="animation a2">Is</p>
+     <p class="animation a1">Loading</p>
+     <p class="animation a2">.</p>
+     <p class="animation a1">.</p>
+     <p class="animation a2">.</p>
+ </div> 
+  <!-- //================================== -->
+
+   <div class="main-info-container" id="container_div"> 
+      <div class="main-info-card">
+          <img src="" alt="" id="img">
+          <p class="temp"><span id="temp_number"></span><sup>&#176;</sup>C</p>
+          <p id="main"></p>
+      </div>
+
+      <div class="foother_in">
+       <div class="flex">
+         <p><span><i class="fa-solid fa-scroll"></i></span> Descroption:<span id="span1"></span></p>
+         <p><span><i class="fa-solid fa-droplet"></i></span> Humidity:<span id="span2"></span> </p>
+        </div>
+  
+        <div class="flex">
+         <p><span><i class="fa-solid fa-wind"></i></span> Wind Speed:<span id="span3"></span> </p>
+         <p><span><i class="fa-solid fa-compass"></i></span> Deg. :<span id="span4"></span><sup id="span41">&#176;</sup></p>
+        </div>
+  
+        <div class="flex">
+         <p><span><img src="sunrise.png" alt=""></span> Sunrise:<span id="span5"></span></p>
+         <p><span><img src="sunset (1).png" alt=""></span> Sunset:<span id="span6"></span> </p>
+        </div>
+    </div>
+   </div>
+  </div> 
+
+  
+</div>
+
+ <script src="logic.js"></script>
+</body>
+
+</html>
